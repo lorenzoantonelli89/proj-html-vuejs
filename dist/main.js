@@ -13,6 +13,7 @@ function initVue() {
     data: {
       'logo': 'img/avada-bakery-logo.png',
       'linksHeader': ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT', '<i class="fas fa-shopping-cart"></i>'],
+      'activeLinkHeader': 0,
       'scrollOn': false,
       'locations': [{
         img: 'img/new-york-bk-800x530.jpg',
@@ -39,6 +40,9 @@ function initVue() {
         if (window.scrollY == 0) {
           this.scrollOn = false;
         }
+      },
+      clickLink: function clickLink(index) {
+        this.activeLinkHeader = index;
       }
     },
     computed: {}

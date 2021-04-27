@@ -31,10 +31,14 @@
                 <img :src="logo" alt="logo Bakery">
                 <ul>
                     <!-- ciclo per stampare link da js -->
-                    <li v-for="link in linksHeader">
-                        <a href="" v-html="link">
-
+                    <li v-for="(link, index) in linksHeader">
+                        <a href="" v-html="link" @click="clickLink(index)">
+                            <!-- {{link}} -->
+                            
                         </a>
+                        <div class="underline" :class="(activeLinkHeader == index) ? 'active' : ''">
+                        
+                        </div>
                     </li>
                 </ul>
             </header>
@@ -271,7 +275,6 @@
             <section class="section-fourth">
                 <!-- primo box immagine tavolo legno con pane e scritte -->
                 <div class="box-1">
-                    <img src="img/bakery-process-1.jpg" alt="">
                     <div class="layover">
                         <div class="text-left">
                             <h2>

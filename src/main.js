@@ -15,6 +15,7 @@ function initVue() {
                 'MY ACCOUNT',
                 '<i class="fas fa-shopping-cart"></i>',
             ],
+            'activeLinkHeader': 0,
             'scrollOn': false,
             'locations': [
                 {
@@ -58,8 +59,10 @@ function initVue() {
                 if(window.scrollY == 0){
                     this.scrollOn = false;
                 }
+            },
+            clickLink: function (index) {
+                this.activeLinkHeader = index;
             }
-
         },
         computed: {
 

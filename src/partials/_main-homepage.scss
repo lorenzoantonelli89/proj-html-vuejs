@@ -4,7 +4,8 @@
         min-height: 800px;
         background-image: url(img/hero-header-bakery.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
     // regole jumbotron e figli
     #jumbotron{
@@ -15,12 +16,12 @@
             @include text-font(12px, $font2, 1px, $color2);
         }
         h1{
-            width: 25%;
+            width: 28%;
             @include text-font(56px, $font1, -1px, $color1);
             margin-top: 20px;
         }
         p{
-            width: 36%;
+            width: 34%;
             @include text-font(18px, $font2, 0, $color2);
             font-weight: 500;
             margin: 30px 0;
@@ -300,10 +301,15 @@
                 max-width: 100%;
             }
             div.box-1{
+                height: 815px;
+                background-image: linear-gradient(170deg, rgba(35, 33, 37, 0.3) 0%, rgba(35, 33, 37, 0.8) 100%), url(img/bakery-process-1.jpg);
+                background-position: left top;
+                background-repeat: no-repeat;
+                background-size: cover;
                 
                 div.layover{
                     @include display-flex-row(flex-start, space-around);
-                    height: 568px;
+                    height: 815px;
 
                     div.text-left{
                         width: 50%;
