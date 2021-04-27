@@ -379,9 +379,8 @@
 }
 #app main section.section-fourth div.box-1 div.layover {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   align-items: flex-start;
+  justify-content: space-around;
   height: 568px;
 }
 #app main section.section-fourth div.box-1 div.layover div.text-left {
@@ -399,22 +398,21 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
 }
 #app main section.section-fourth div.box-1 div.layover div.text-right span {
   font-size: 96px;
   font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
   color: #ffff;
 }
 #app main section.section-fourth div.box-1 div.layover div.text-right div {
   width: 57%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
 }
 #app main section.section-fourth div.box-1 div.layover div.text-right div span {
   font-size: 12px;
@@ -444,13 +442,122 @@
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #232125;
 }
 #app main section.section-fourth div.box-2 div.left div.layover {
   width: 745px;
   height: 885px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#app main section.section-fourth div.box-2 div.left div.layover div.text-left {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#app main section.section-fourth div.box-2 div.left div.layover div.text-left h2 {
+  font-size: 56px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -1px;
+  color: #ffff;
+}
+#app main section.section-fourth div.box-2 div.left div.layover div.text-left span {
+  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  color: #ffff;
+}
+#app main section.section-fourth div.box-2 div.left div.layover div.text-left p {
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+  color: #ffff;
+  line-height: 30px;
+  margin-top: 20px;
+}
+#app main section.section-fourth div.box-2 div.left div.layover div.text-right span {
+  font-size: 96px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  color: #ffff;
 }
 #app main section.section-fourth div.box-2 div.right {
   background-color: #f0edf5;
+  padding: 70px;
+}
+#app main section.section-fourth div.box-2 div.right span {
+  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 1px;
+  color: #676361;
+}
+#app main section.section-fourth div.box-2 div.right h2 {
+  width: 80%;
+  font-size: 48px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -1px;
+  color: #55328b;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+#app main section.section-fourth div.box-2 div.right p {
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+  color: #676361;
+}
+#app main section.section-fourth div.box-3 {
+  height: 705px;
+  margin-top: 60px;
+  background-image: linear-gradient(200deg, rgba(35, 33, 37, 0) 10%, rgba(35, 33, 37, 0.8) 100%), url(img/bakery-process-3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #232125;
+}
+#app main section.section-fourth div.box-3 div.layover {
+  height: 705px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#app main section.section-fourth div.box-3 div.layover div.text-left {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#app main section.section-fourth div.box-3 div.layover div.text-left h2 {
+  font-size: 56px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -1px;
+  color: #ffff;
+}
+#app main section.section-fourth div.box-3 div.layover div.text-left span {
+  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  color: #ffff;
+}
+#app main section.section-fourth div.box-3 div.layover div.text-left p {
+  width: 60%;
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+  color: #ffff;
+  line-height: 30px;
+  margin-top: 20px;
+}
+#app main section.section-fourth div.box-3 div.layover div.text-right span {
+  font-size: 96px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: lighter;
+  color: #ffff;
 }
 
 * {

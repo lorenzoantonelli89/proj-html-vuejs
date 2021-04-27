@@ -58,7 +58,7 @@
         // regole prima sezione
         section.section-first{
             @include centring;
-            @include display-flex-row(space-between);
+            @include display-flex-row(center, space-between);
             margin-top: 150px;
             
             // regole contenitore testo e figli
@@ -87,7 +87,7 @@
             }
             // regole carousel sezione 1
             div.carousel{
-                @include display-flex-row(center);
+                @include display-flex-row(center, center);
 
                 div[class*="img-"]:first-child{
                     margin-right: 20px;
@@ -129,7 +129,7 @@
                     top: 0;
                     left: 0;
                     background-color: rgba(0, 0, 0, 0.4);
-                    @include display-flex-column(center);
+                    @include display-flex-column(center, center);
                     visibility: hidden;
 
                     >*{
@@ -210,7 +210,7 @@
             }
             // regole immagini in background normal e in hover
             div.image-promo{
-                @include display-flex-row(space-around);
+                @include display-flex-row(center, space-around);
 
                 div[class*="promo-"]{
                     width: 623px;
@@ -218,7 +218,7 @@
                 }
                 div.text-hidden{
                         height: 100%;
-                        @include display-flex-column(center);
+                        @include display-flex-column(center, center);
                         visibility: hidden;
 
                         span{
@@ -285,11 +285,11 @@
         // regole sezione 3
         section.section-third{
             @include centring;
-            @include display-flex-row(space-between);
+            @include display-flex-row(center, space-between);
             margin-top: 250px;
 
             div.content-text{
-                @include display-flex-column(center);
+                @include display-flex-column(center, center);
                 text-align: center;
                 width: 21.5%;
 
@@ -335,8 +335,7 @@
             div.box-1{
                 
                 div.layover{
-                    @include display-flex-row(space-around);
-                    align-items: flex-start;
+                    @include display-flex-row(flex-start, space-around);
                     height: 568px;
 
                     div.text-left{
@@ -353,18 +352,17 @@
                     div.text-right{
                         height: 100%;
                         width: 50%;
-                        @include display-flex-column(space-between);
-                        align-items: flex-end;
+                        @include display-flex-column(flex-end, space-between);
                         
                         span{
                             font-size: 96px;
                             font-family: $font2;
+                            font-weight: lighter;
                             color: $color3;
                         }
                         div{
                             width: 57%;
-                            @include display-flex-column(center);
-                            align-items: flex-start;
+                            @include display-flex-column(flex-start, center);
 
                             span{
                             font-size: 12px;
@@ -384,7 +382,7 @@
                 }
             }
             div.box-2{
-                @include display-flex-row(space-between);
+                @include display-flex-row(center, space-between);
                 margin-top: 60px;
 
                 div.left, div.right{
@@ -397,15 +395,135 @@
                     background-position: right center;
                     background-repeat: no-repeat;
                     background-size: cover;
+                    background-color: rgb(35, 33, 37);
 
                     div.layover{
                         width: 745px;
                         height: 885px;
+                        @include display-flex-row(flex-start, space-between);
+
+                        div.text-left{
+                            height: 100%;
+                            width: 48%;
+                            @include display-flex-column(flex-start, space-between);
+
+                            h2{
+                                font-size: 56px;
+                                font-family: $font1;
+                                letter-spacing: -1px;
+                                color: $color3;
+                            }
+                            span{
+                                font-size: 12px;
+                                font-family: $font2;
+                                font-weight: lighter;
+                                letter-spacing: 1px;
+                                color: $color3;
+                            }
+                            p{
+                                font-size: 18px;
+                                font-family: $font2;
+                                // letter-spacing: 1px;
+                                color: $color3;
+                                line-height: 30px;
+                                margin-top: 20px;
+                            }
+                        }
+                        div.text-right{
+
+                            span{
+                                font-size: 96px;
+                                font-family: $font2;
+                                font-weight: lighter;
+                                // letter-spacing: 1px;
+                                color: $color3;
+                            }
+                        }
+                        
                     }
                 }
                 div.right{
                     background-color: $color4;
+                    padding: 70px;
+
+
+                    span{
+                        font-size: 12px;
+                        font-family: $font2;
+                        letter-spacing: 1px;
+                        color: $color2;
+                    }
+                    h2{
+                        width: 80%;
+                        font-size: 48px;
+                        font-family: $font1;
+                        letter-spacing: -1px;
+                        color: $color1;
+                        margin-top: 30px;
+                        margin-bottom: 25px;
+                    }
+                    p{
+                        font-size: 18px;
+                        font-family: $font2;
+                        // letter-spacing: 1px;
+                        color: $color2;
+                        
+                    }
                 }
+            }
+            div.box-3{
+                height: 705px;
+                margin-top: 60px;
+                background-image: linear-gradient(200deg, rgba(35, 33, 37, 0) 10%, rgba(35, 33, 37, 0.8) 100%), url(img/bakery-process-3.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: rgb(35, 33, 37);
+
+                div.layover{
+                        height: 705px;
+                        @include display-flex-row(flex-start, space-between);
+
+                        div.text-left{
+                            height: 100%;
+                            width: 48%;
+                            @include display-flex-column(flex-start, space-between);
+
+                            h2{
+                                font-size: 56px;
+                                font-family: $font1;
+                                letter-spacing: -1px;
+                                color: $color3;
+                            }
+                            span{
+                                font-size: 12px;
+                                font-family: $font2;
+                                font-weight: lighter;
+                                letter-spacing: 1px;
+                                color: $color3;
+                            }
+                            p{
+                                width: 60%;
+                                font-size: 18px;
+                                font-family: $font2;
+                                // letter-spacing: 1px;
+                                color: $color3;
+                                line-height: 30px;
+                                margin-top: 20px;
+                            }
+                        }
+                        div.text-right{
+
+                            span{
+                                font-size: 96px;
+                                font-family: $font2;
+                                font-weight: lighter;
+                                // letter-spacing: 1px;
+                                color: $color3;
+                            }
+                        }
+                        
+                    }
             }
         }
     }

@@ -6,17 +6,17 @@ $color2: #676361;
 $color3: #ffff;
 $color4: #f0edf5;
 
-@mixin display-flex-row($var) {
+@mixin display-flex-row($var1, $var2) {
     display: flex;
-    align-items: center;
-    justify-content: $var;
+    align-items: $var1;
+    justify-content: $var2;
 }
 
-@mixin display-flex-column($var) {
+@mixin display-flex-column($var1, $var2) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: $var;
+    align-items: $var1;
+    justify-content: $var2;
 }
 
 @mixin centring {
