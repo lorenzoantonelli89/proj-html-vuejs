@@ -1,3 +1,13 @@
-$font1: 'Source Sans Pro', sans-serif;
+$font1: 'Source Serif Pro', serif;
 $font2: 'Work Sans', sans-serif;
+
+$bg-primary: #fff;
+
+$color1: #55328b;
+$color2: #676361;
+
+@mixin centring {
+    width: 93%;
+    margin: 0 auto;
+}
 

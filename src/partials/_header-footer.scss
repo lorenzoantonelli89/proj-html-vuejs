@@ -1,0 +1,33 @@
+@mixin display-flex-row($var) {
+    display: flex;
+    align-items: center;
+    justify-content: $var;
+}
+
+#app{
+    header.active{
+        background-color: #ffff;
+    }
+    header{
+        height: 111px;
+        width: 100%;
+        padding: 35px 10px 40px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include display-flex-row(space-between);
+
+        ul{
+            list-style: none;
+
+            li{
+                display: inline-block;
+                margin-right: 50px;
+                color: $color1;
+                font-family: $font2;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

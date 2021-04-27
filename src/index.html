@@ -6,32 +6,53 @@
     <!-- link font google -->
     <!-- source serif pro -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
     <!-- work sans -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;500&display=swap" rel="stylesheet">
     <!-- link font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakery</title>
+    <!-- link vueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- my link js -->
     <script src="main.js"></script>
     <!-- my link css -->
     <link rel="stylesheet" href="master.css">
 </head>
 <body>
-    <div id="app">
-        <!-- sezione intestazione pagina -->
-        <header>
+    <div id="app" >
+        <div class="container-background-header-jumbo">
+            <!-- sezione intestazione pagina -->
+            <header :class="(scrollOn == true) ? 'active' : ''">
+                <img :src="logoHeader" alt="logo Bakery">
+                <ul>
+                    <!-- ciclo per stampare link da js -->
+                    <li v-for="link in linksHeader" v-html="link">
 
-        </header>
-        <!-- sezione parte in evidenza -->
-        <div id="jumbotron">
-
+                    </li>
+                </ul>
+            </header>
+            <!-- sezione parte in evidenza -->
+            <div id="jumbotron">
+                <span>
+                    FRESH & TASTY BAKERY EVERY DAY
+                </span>
+                <h1>
+                    The Perfect Fresh Bread
+                </h1>
+                <p>
+                    Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius. Aliquam erat volutpat. Nullam quis sagittis nibh ac nulla id orci tempor.
+                </p>
+                <a href="">
+                    Explore our product
+                </a>
+            </div>
+            <!-- parte principale pagina -->
         </div>
-        <!-- parte principale pagina -->
         <main>
             <!-- prima sezione immagini prodotti acquistabili -->
             <section class="section-first">

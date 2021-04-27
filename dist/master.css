@@ -1,3 +1,73 @@
+#app header.active {
+  background-color: #ffff;
+}
+#app header {
+  height: 111px;
+  width: 100%;
+  padding: 35px 10px 40px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#app header ul {
+  list-style: none;
+}
+#app header ul li {
+  display: inline-block;
+  margin-right: 50px;
+  color: #55328b;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+#app div.container-background-header-jumbo {
+  min-height: 800px;
+  background-image: url(img/hero-header-bakery.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#app #jumbotron {
+  width: 93%;
+  margin: 0 auto;
+  padding-top: 270px;
+}
+#app #jumbotron span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #676361;
+  font-family: "Work Sans", sans-serif;
+}
+#app #jumbotron h1 {
+  width: 20%;
+  font-size: 56px;
+  letter-spacing: -1px;
+  color: #55328b;
+  font-family: "Source Serif Pro", serif;
+  margin-top: 20px;
+}
+#app #jumbotron p {
+  width: 22%;
+  font-size: 18px;
+  color: #676361;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  margin: 30px 0;
+}
+#app #jumbotron a {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  color: #55328b;
+  background-color: #ffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
