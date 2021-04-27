@@ -1,5 +1,21 @@
-function init() {
-    console.log('hello world');
+function initVue() {
+    
+    new vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+
+        },
+        computed: {
+
+        },
+    });
 }
 
-init();
+function init() {
+    initVue();
+}
+
+document.addEventListener('DOMContentLoaded', init);
