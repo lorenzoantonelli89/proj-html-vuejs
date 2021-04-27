@@ -356,7 +356,34 @@
             </section>
             <!-- sezione cinque visita la tua bakery London/NewYork -->
             <section class="section-fifth">
+                <div class="box-locations" v-for="(elem, index) in locations" :class="(index == 0) ? 'lightblue' : 'lightyellow'">
+                    <img :src="elem.img" alt="">
+                    <h2>
+                        {{elem.city}}
+                    </h2>
+                    <div class="info">
+                        <div>
+                            <p>
+                                CALL US
+                            </p>
+                            <span>
+                                {{elem.phone}}
+                            </span>
+                        </div>
+                        <div>
+                            <p>
+                                OPEN ALL WEEK
+                            </p>
+                            <span>
+                                {{elem.openingTime}}
+                            </span>
+                        </div>
+                        <a href="">
+                            View Map
+                        </a>
+                    </div>
 
+                </div>
             </section>
             <!-- sezione sei immagini instagram follow us -->
             <section class="section-sixth">

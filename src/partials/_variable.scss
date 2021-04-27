@@ -34,3 +34,10 @@ $color4: #f0edf5;
     font-family: $font2;
 }
 
+@mixin text-font($size, $family, $letspacing, $color) {
+    font-size: $size;
+    font-family: $family;
+    letter-spacing: $letspacing;
+    color: $color;
+}
+

@@ -12,32 +12,22 @@
         padding-top: 270px;
 
         span{
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: $color2;
-            font-family: $font2;
+            @include text-font(12px, $font2, 1px, $color2);
         }
         h1{
             width: 25%;
-            font-size: 56px;
-            letter-spacing: -1px;
-            color: $color1;
-            font-family: $font1;
+            @include text-font(56px, $font1, -1px, $color1);
             margin-top: 20px;
         }
         p{
             width: 36%;
-            font-size: 18px;
-            color: $color2;
-            font-family: $font2;
+            @include text-font(18px, $font2, 0, $color2);
             font-weight: 500;
             margin: 30px 0;
         }
         a{
-            font-size: 14px;
-            font-family: $font2;
+            @include text-font(14px, $font2, 0, $color1);
             font-weight: bold;
-            color: $color1;
             background-color: $color3;
             padding: 10px 20px;
             text-decoration: none;
@@ -66,16 +56,10 @@
                 width: 35%;
 
                 span{
-                font-size: 12px;
-                font-family: $font2;
-                letter-spacing: 1px;
-                color: $color2;
+                    @include text-font(12px, $font2, 1px, $color2);
                 }
                 h2{
-                    font-size: 36px;
-                    font-family: $font1;
-                    letter-spacing: -1px;
-                    color: $color1;
+                    @include text-font(36px, $font1, -1px, $color1);
                     margin: 30px 0 75px 0;
                 }
                 a{
@@ -191,16 +175,10 @@
                 text-align: center;
 
                 span{
-                    font-size: 12px;
-                    font-family: $font2;
-                    letter-spacing: 1px;
-                    color: $color2;
+                    @include text-font(12px, $font2, 1px, $color2);
                 }
                 h2{
-                    font-size: 36px;
-                    font-family: $font1;
-                    letter-spacing: -1px;
-                    color: $color1;
+                    @include text-font(36px, $font1, -1px, $color1);
                     margin-top: 35px;
                     margin-bottom: 75px;
                 }
@@ -222,16 +200,10 @@
                         visibility: hidden;
 
                         span{
-                            font-size: 12px;
-                            font-family: $font2;
-                            letter-spacing: 1px;
-                            color: $color3;
+                            @include text-font(12px, $font2, 1px, $color3);
                         }
                         h2{
-                            font-size: 36px;
-                            font-family: $font1;
-                            letter-spacing: -1px;
-                            color: $color3;
+                            @include text-font(36px, $font1, -1px, $color3);
                             margin: 40px 0;
                         }
                         a{
@@ -295,16 +267,11 @@
 
                 h2{
                     width: 75%;
-                    font-size: 36px;
-                    font-family: $font1;
-                    letter-spacing: -1px;
-                    color: $color1;
+                    @include text-font(36px, $font1, -1px, $color1);
                 }
                 p{
                     width: 85%;
-                    font-size: 16px;
-                    font-family: $font2;
-                    color: $color2;
+                    @include text-font(16px, $font2, 0, $color2);
                     margin: 40px 0;
                 }
                 a{
@@ -343,10 +310,7 @@
 
                         h2{
                             width: 60%;
-                            font-size: 56px;
-                            font-family: $font1;
-                            letter-spacing: -1px;
-                            color: $color3;
+                            @include text-font(56px, $font1, -1px, $color3);
                         }
                     }
                     div.text-right{
@@ -355,25 +319,18 @@
                         @include display-flex-column(flex-end, space-between);
                         
                         span{
-                            font-size: 96px;
-                            font-family: $font2;
+                            @include text-font(96px, $font2, 0, $color3);
                             font-weight: lighter;
-                            color: $color3;
                         }
                         div{
                             width: 57%;
                             @include display-flex-column(flex-start, center);
 
                             span{
-                            font-size: 12px;
-                            letter-spacing: 1px;
-                            font-family: $font2;
-                            color: $color3;
+                                @include text-font(12px, $font2, 1px, $color3);
                             }
                             p{
-                                font-size: 18px;
-                                font-family: $font2;
-                                color: $color3;
+                                @include text-font(18px, $font2, 0, $color3);
                                 margin-top: 20px;
                                 line-height: 30px;
                             }
@@ -408,23 +365,14 @@
                             @include display-flex-column(flex-start, space-between);
 
                             h2{
-                                font-size: 56px;
-                                font-family: $font1;
-                                letter-spacing: -1px;
-                                color: $color3;
+                                @include text-font(56px, $font1, -1px, $color3);
                             }
                             span{
-                                font-size: 12px;
-                                font-family: $font2;
+                                @include text-font(12px, $font2, 1px, $color3);
                                 font-weight: lighter;
-                                letter-spacing: 1px;
-                                color: $color3;
                             }
                             p{
-                                font-size: 18px;
-                                font-family: $font2;
-                                // letter-spacing: 1px;
-                                color: $color3;
+                                @include text-font(18px, $font2, 0, $color3);
                                 line-height: 30px;
                                 margin-top: 20px;
                             }
@@ -432,11 +380,8 @@
                         div.text-right{
 
                             span{
-                                font-size: 96px;
-                                font-family: $font2;
+                                @include text-font(96px, $font2, 0, $color3);
                                 font-weight: lighter;
-                                // letter-spacing: 1px;
-                                color: $color3;
                             }
                         }
                         
@@ -448,26 +393,16 @@
 
 
                     span{
-                        font-size: 12px;
-                        font-family: $font2;
-                        letter-spacing: 1px;
-                        color: $color2;
+                        @include text-font(12px, $font2, 1px, $color2);
                     }
                     h2{
                         width: 80%;
-                        font-size: 48px;
-                        font-family: $font1;
-                        letter-spacing: -1px;
-                        color: $color1;
+                        @include text-font(48px, $font1, -1px, $color1);
                         margin-top: 30px;
                         margin-bottom: 25px;
                     }
                     p{
-                        font-size: 18px;
-                        font-family: $font2;
-                        // letter-spacing: 1px;
-                        color: $color2;
-                        
+                        @include text-font(18px, $font2, 0, $color2);
                     }
                 }
             }
@@ -490,24 +425,15 @@
                             @include display-flex-column(flex-start, space-between);
 
                             h2{
-                                font-size: 56px;
-                                font-family: $font1;
-                                letter-spacing: -1px;
-                                color: $color3;
+                                @include text-font(56px, $font1, -1px, $color3);
                             }
                             span{
-                                font-size: 12px;
-                                font-family: $font2;
+                                @include text-font(12px, $font2, 1px, $color3);
                                 font-weight: lighter;
-                                letter-spacing: 1px;
-                                color: $color3;
                             }
                             p{
                                 width: 60%;
-                                font-size: 18px;
-                                font-family: $font2;
-                                // letter-spacing: 1px;
-                                color: $color3;
+                                @include text-font(18px, $font2, 0, $color3);
                                 line-height: 30px;
                                 margin-top: 20px;
                             }
@@ -515,15 +441,64 @@
                         div.text-right{
 
                             span{
-                                font-size: 96px;
-                                font-family: $font2;
+                                @include text-font(96px, $font2, 0, $color3);
                                 font-weight: lighter;
-                                // letter-spacing: 1px;
-                                color: $color3;
                             }
                         }
                         
                     }
+            }
+        }
+        section.section-fifth{
+            @include centring;
+            @include display-flex-row(center, center);
+            margin-top: 250px;
+
+            div.box-locations.lightblue{
+                background-color: #f1f9fb;
+            }
+            div.box-locations.lightyellow{
+                background-color: #faf3e2;
+            }
+
+            div.box-locations{
+                
+                h2{
+                    @include text-font(36px, $font1, -1px, $color1);
+                    text-align: center;
+                    margin-top: 50px;
+                    margin-bottom: 40px;
+                }
+                h2:hover{
+                    text-decoration: underline;
+                }
+                div.info{
+                    @include display-flex-row(center, space-around);
+                    margin-bottom: 40px;
+
+                    div{
+                        p{
+                            @include text-font(12px, $font2, 1px, $color2);
+                            text-align: center;
+                            margin-bottom: 15px;
+                        }
+                        span{
+                            @include text-font(16px, $font2, 0, $color2);
+                        }
+                        >*:hover{
+                        text-decoration: underline;
+                    }
+                    }
+                    a{
+                        @include linkButton($color3, $color1);
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        @include linkButton($color1, $color3);
+                        text-decoration: underline;
+                    }
+                    
+                }
             }
         }
     }

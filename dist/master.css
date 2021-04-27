@@ -20,10 +20,10 @@
 #app header ul li {
   display: inline-block;
   margin-right: 50px;
-  color: #55328b;
-  font-family: "Work Sans", sans-serif;
   font-size: 12px;
+  font-family: "Work Sans", sans-serif;
   letter-spacing: 1px;
+  color: #55328b;
 }
 
 #app div.container-background-header-jumbo {
@@ -39,31 +39,33 @@
 }
 #app #jumbotron span {
   font-size: 12px;
+  font-family: "Work Sans", sans-serif;
   letter-spacing: 1px;
   color: #676361;
-  font-family: "Work Sans", sans-serif;
 }
 #app #jumbotron h1 {
   width: 25%;
   font-size: 56px;
+  font-family: "Source Serif Pro", serif;
   letter-spacing: -1px;
   color: #55328b;
-  font-family: "Source Serif Pro", serif;
   margin-top: 20px;
 }
 #app #jumbotron p {
   width: 36%;
   font-size: 18px;
-  color: #676361;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #676361;
   font-weight: 500;
   margin: 30px 0;
 }
 #app #jumbotron a {
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
-  font-weight: bold;
+  letter-spacing: 0;
   color: #55328b;
+  font-weight: bold;
   background-color: #ffff;
   padding: 10px 20px;
   text-decoration: none;
@@ -347,6 +349,7 @@
   width: 85%;
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
   color: #676361;
   margin: 40px 0;
 }
@@ -404,8 +407,9 @@
 #app main section.section-fourth div.box-1 div.layover div.text-right span {
   font-size: 96px;
   font-family: "Work Sans", sans-serif;
-  font-weight: lighter;
+  letter-spacing: 0;
   color: #ffff;
+  font-weight: lighter;
 }
 #app main section.section-fourth div.box-1 div.layover div.text-right div {
   width: 57%;
@@ -416,13 +420,14 @@
 }
 #app main section.section-fourth div.box-1 div.layover div.text-right div span {
   font-size: 12px;
-  letter-spacing: 1px;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 1px;
   color: #ffff;
 }
 #app main section.section-fourth div.box-1 div.layover div.text-right div p {
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
   color: #ffff;
   margin-top: 20px;
   line-height: 30px;
@@ -468,13 +473,14 @@
 #app main section.section-fourth div.box-2 div.left div.layover div.text-left span {
   font-size: 12px;
   font-family: "Work Sans", sans-serif;
-  font-weight: lighter;
   letter-spacing: 1px;
   color: #ffff;
+  font-weight: lighter;
 }
 #app main section.section-fourth div.box-2 div.left div.layover div.text-left p {
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
   color: #ffff;
   line-height: 30px;
   margin-top: 20px;
@@ -482,8 +488,9 @@
 #app main section.section-fourth div.box-2 div.left div.layover div.text-right span {
   font-size: 96px;
   font-family: "Work Sans", sans-serif;
-  font-weight: lighter;
+  letter-spacing: 0;
   color: #ffff;
+  font-weight: lighter;
 }
 #app main section.section-fourth div.box-2 div.right {
   background-color: #f0edf5;
@@ -507,6 +514,7 @@
 #app main section.section-fourth div.box-2 div.right p {
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
   color: #676361;
 }
 #app main section.section-fourth div.box-3 {
@@ -541,14 +549,15 @@
 #app main section.section-fourth div.box-3 div.layover div.text-left span {
   font-size: 12px;
   font-family: "Work Sans", sans-serif;
-  font-weight: lighter;
   letter-spacing: 1px;
   color: #ffff;
+  font-weight: lighter;
 }
 #app main section.section-fourth div.box-3 div.layover div.text-left p {
   width: 60%;
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
   color: #ffff;
   line-height: 30px;
   margin-top: 20px;
@@ -556,8 +565,78 @@
 #app main section.section-fourth div.box-3 div.layover div.text-right span {
   font-size: 96px;
   font-family: "Work Sans", sans-serif;
-  font-weight: lighter;
+  letter-spacing: 0;
   color: #ffff;
+  font-weight: lighter;
+}
+#app main section.section-fifth {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+}
+#app main section.section-fifth div.box-locations.lightblue {
+  background-color: #f1f9fb;
+}
+#app main section.section-fifth div.box-locations.lightyellow {
+  background-color: #faf3e2;
+}
+#app main section.section-fifth div.box-locations h2 {
+  font-size: 36px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -1px;
+  color: #55328b;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+#app main section.section-fifth div.box-locations h2:hover {
+  text-decoration: underline;
+}
+#app main section.section-fifth div.box-locations div.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+#app main section.section-fifth div.box-locations div.info div p {
+  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 1px;
+  color: #676361;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#app main section.section-fifth div.box-locations div.info div span {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #676361;
+}
+#app main section.section-fifth div.box-locations div.info div > *:hover {
+  text-decoration: underline;
+}
+#app main section.section-fifth div.box-locations div.info a {
+  background-color: #ffff;
+  color: #55328b;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+}
+#app main section.section-fifth div.box-locations div.info a:hover {
+  background-color: #55328b;
+  color: #ffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  text-decoration: underline;
 }
 
 * {

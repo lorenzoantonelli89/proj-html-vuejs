@@ -21,10 +21,7 @@
             li{
                 display: inline-block;
                 margin-right: 50px;
-                color: $color1;
-                font-family: $font2;
-                font-size: 12px;
-                letter-spacing: 1px;
+                @include text-font(12px, $font2, 1px, $color1);
             }
         }
     }
