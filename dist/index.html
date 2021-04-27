@@ -28,11 +28,13 @@
         <div class="container-background-header-jumbo">
             <!-- sezione intestazione pagina -->
             <header :class="(scrollOn == true) ? 'active' : ''">
-                <img :src="logoHeader" alt="logo Bakery">
+                <img :src="logo" alt="logo Bakery">
                 <ul>
                     <!-- ciclo per stampare link da js -->
-                    <li v-for="link in linksHeader" v-html="link">
+                    <li v-for="link in linksHeader">
+                        <a href="" v-html="link">
 
+                        </a>
                     </li>
                 </ul>
             </header>
@@ -413,18 +415,71 @@
             </section>
             <!-- sezione sette ordina e ricevi a casa -->
             <section class="section-seventh">
+                <div class="content-text">
+                    <span>
+                        TRY OUR SEASONAL PRODUCTS
+                    </span>
+                    <h1>
+                        Order for pick-up or delivery to your home
+                    </h1>
+                    <a href="">
+                        Shop Now
+                    </a>
 
+                </div>
             </section>
         </main>
         <!-- pie pagina -->
         <footer>
             <!-- prima sezione footer con link e add email -->
             <section class="footer-section-first">
-
+                <div class="link-list">
+                    <img :src="logo" alt="">
+                    <ul>
+                        <li v-for="link in linksFooter">
+                            <a href="" v-html="link">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <h3>
+                        Subscribe to our Newsletter
+                    </h3>
+                    <div>
+                        <input type="text" placeholder="Enter email address*" v-model="inputEmail">
+                        <a href="">
+                            Subscribe
+                        </a>
+                    </div>
+                </div>
             </section>
             <!-- seconda sezione copyright link social -->
             <section class="footer-section-second">
-
+                <div>
+                    <span>
+                        © Copyright 2012 -
+                    </span>
+                    <span>
+                        2021 | Avada Theme by
+                    </span>
+                    <span class="violet">
+                        ThemeFusion
+                    </span>
+                    <span>
+                        | All Rights Reserved | Powered by
+                    </span>
+                    <span class="violet">
+                        Wordpress
+                    </span>
+                </div>
+                <ul>
+                    <li v-for="icon in socialIcons">
+                        <a href="">
+                            <i class="fab" :class='icon'></i>
+                        </a>
+                    </li>
+                </ul>
             </section>
         </footer>
     </div>

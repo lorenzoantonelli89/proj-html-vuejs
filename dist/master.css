@@ -20,10 +20,118 @@
 #app header ul li {
   display: inline-block;
   margin-right: 50px;
+}
+#app header ul li a {
   font-size: 12px;
   font-family: "Work Sans", sans-serif;
   letter-spacing: 1px;
   color: #55328b;
+  text-decoration: none;
+}
+#app footer {
+  width: 83.3%;
+  margin: 0 auto;
+}
+#app footer section.footer-section-first {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#app footer section.footer-section-first div.link-list {
+  height: 166px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+#app footer section.footer-section-first div.link-list ul {
+  list-style: none;
+}
+#app footer section.footer-section-first div.link-list ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+#app footer section.footer-section-first div.link-list ul li a {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #55328b;
+  text-decoration: none;
+}
+#app footer section.footer-section-first div.link-list ul li:hover a {
+  text-decoration: underline;
+}
+#app footer section.footer-section-first div.subscribe {
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#app footer section.footer-section-first div.subscribe h3 {
+  font-size: 25px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -0.3px;
+  color: #55328b;
+}
+#app footer section.footer-section-first div.subscribe h3:hover {
+  text-decoration: underline;
+}
+#app footer section.footer-section-first div.subscribe div input {
+  padding: 10px 70px 10px 10px;
+  border: 1px solid #f0edf5;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+#app footer section.footer-section-first div.subscribe div a {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #ffff;
+  font-weight: bold;
+  background-color: #55328b;
+  padding: 10px 50px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#app footer section.footer-section-first div.subscribe div a:hover {
+  background-color: #f0edf5;
+  color: #55328b;
+  text-decoration: none;
+}
+#app footer section.footer-section-second {
+  margin-top: 100px;
+  margin-bottom: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#app footer section.footer-section-second div span {
+  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #676361;
+}
+#app footer section.footer-section-second div span:hover {
+  text-decoration: underline;
+}
+#app footer section.footer-section-second div span.violet:hover {
+  color: #55328b;
+}
+#app footer section.footer-section-second ul {
+  list-style: none;
+}
+#app footer section.footer-section-second ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+#app footer section.footer-section-second ul li a {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #55328b;
+  text-decoration: none;
 }
 
 #app div.container-background-header-jumbo {
@@ -33,7 +141,7 @@
   background-position: center;
 }
 #app #jumbotron {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   padding-top: 270px;
 }
@@ -80,7 +188,7 @@
   text-decoration: none;
 }
 #app main section.section-first {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -209,7 +317,7 @@
   text-decoration: underline;
 }
 #app main section.section-second {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   margin-top: 250px;
 }
@@ -323,7 +431,7 @@
   text-decoration: none;
 }
 #app main section.section-third {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -363,7 +471,7 @@
   font-family: "Work Sans", sans-serif;
 }
 #app main section.section-fourth {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   margin-top: 250px;
 }
@@ -570,7 +678,7 @@
   font-weight: lighter;
 }
 #app main section.section-fifth {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -639,7 +747,7 @@
   text-decoration: underline;
 }
 #app main section.section-sixth {
-  width: 80%;
+  width: 83.3%;
   margin: 0 auto;
   margin-top: 250px;
 }
@@ -753,6 +861,58 @@
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#app main section.section-seventh {
+  height: 530px;
+  margin-top: 200px;
+  background-image: url(img/call-to-action-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-width: 0px 0px 0px 0px;
+  border-color: #ececed;
+  border-style: solid;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#app main section.section-seventh div.content-text {
+  width: 83.3%;
+  margin: 0 auto;
+  padding-left: 10%;
+}
+#app main section.section-seventh div.content-text span {
+  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 1px;
+  color: #ffff;
+}
+#app main section.section-seventh div.content-text h1 {
+  width: 50%;
+  font-size: 48px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -1px;
+  color: #ffff;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+#app main section.section-seventh div.content-text a {
+  background-color: #ffff;
+  color: #55328b;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+}
+#app main section.section-seventh div.content-text > *:hover {
+  text-decoration: underline;
+}
+#app main section.section-seventh div.content-text > *:hover:last-child {
+  background-color: #55328b;
+  color: #ffff;
+  text-decoration: underline;
 }
 
 * {

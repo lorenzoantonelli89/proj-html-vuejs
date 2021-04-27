@@ -3,7 +3,7 @@ function initVue() {
     new Vue({
         el: '#app',
         data: {
-            'logoHeader': 'img/avada-bakery-logo.png',
+            'logo': 'img/avada-bakery-logo.png',
             'linksHeader': [
                 'HOME',
                 'SHOP',
@@ -29,6 +29,23 @@ function initVue() {
                     phone: '1.800.458.556',
                     openingTime: '9:00 AM - 6:00 PM',
                 }
+            ],
+            'linksFooter': [
+                'Shop',
+                'About',
+                'Gallery',
+                'Locations',
+                'Journal',
+                'Contact',
+                'Orders',
+                '<i class="fas fa-shopping-cart"></i>',
+            ],
+            'inputEmail': '',
+            'socialIcons': [
+                'fa-instagram',
+                'fa-twitter',
+                'fa-facebook-f',
+                'fa-pinterest-p',
             ]
 
         },

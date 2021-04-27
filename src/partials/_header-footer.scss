@@ -21,8 +21,107 @@
             li{
                 display: inline-block;
                 margin-right: 50px;
-                @include text-font(12px, $font2, 1px, $color1);
+                a{
+                    @include text-font(12px, $font2, 1px, $color1);
+                    text-decoration: none;
+                }
+                
             }
         }
     }
+    // regole footer
+    footer{
+        @include centring;
+
+        // regole prima sezione footer
+        section.footer-section-first{
+            margin-top: 50px;
+            @include display-flex-row(center, space-between);
+
+            div.link-list{
+                height: 166px;
+                @include display-flex-column(flex-start, space-around);
+                
+                ul{
+                    // margin-top: 50px;
+                    list-style: none;
+                    li{
+                        display: inline-block;
+                        margin-right: 50px;
+                        a{
+                            @include text-font(16px, $font2, 0, $color1);
+                            text-decoration: none;
+                        }
+                    }
+                    li:hover a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            div.subscribe{
+                height: 144px;
+                @include display-flex-column(center, space-around);
+
+                h3{
+                    @include text-font(25px, $font1, -0.3px, $color1);
+                }
+                h3:hover{
+                    text-decoration: underline;
+                }
+                div{
+                    input{
+                        padding: 10px 70px 10px 10px;
+                        border: 1px solid $color4;
+                        border-radius: 3px;
+                        margin-right: 5px;
+                    }
+                    a{
+                        @include text-font(14px, $font2, 0, $color3);
+                        font-weight: bold;
+                        background-color: $color1;
+                        padding: 10px 50px;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+                    a:hover{
+                        background-color: $color4;
+                        color: $color1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        // regole seconda sezione footer
+        section.footer-section-second{
+            margin-top: 100px;
+            margin-bottom: 90px;
+            @include display-flex-row(center, space-between);
+
+            div{
+                span{
+                    @include text-font(12px, $font2, 0, $color2);
+                }
+                span:hover{
+                    text-decoration: underline;
+                }
+                span.violet:hover{
+                    color: $color1;
+                }
+            }
+            ul{
+                list-style: none;
+
+                li{
+                    display: inline-block;
+                    margin-right: 50px;
+                    a{
+                        @include text-font(16px, $font2, 0, $color1);
+                        text-decoration: none;
+                    }
+                }
+                    
+            }
+        }
+    }
+
 }

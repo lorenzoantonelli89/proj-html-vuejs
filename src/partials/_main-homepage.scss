@@ -604,5 +604,50 @@
                 }
             }
         }
+        // sezione sette immagine background title e link
+        section.section-seventh{
+            height: 530px;
+            margin-top: 200px;
+            background-image: url(img/call-to-action-bg.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-width: 0px 0px 0px 0px;
+            border-color: #ececed;
+            border-style: solid;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            @include display-flex-row(center, flex-start);
+
+            div.content-text{
+                @include centring;
+                padding-left: 10%;
+
+                span{
+                    @include text-font(12px, $font2, 1px, $color3);
+                }
+                h1{
+                    width: 50%;
+                    @include text-font(48px, $font1, -1px, $color3);
+                    margin-top: 30px;
+                    margin-bottom: 70px;
+                }
+                a{
+                    @include linkButton($color3, $color1);
+                    text-decoration: none;
+                }
+
+                >*:hover{
+                    text-decoration: underline;
+                    &:last-child{
+                        background-color: $color1;
+                        color: $color3;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        // fine main
     }
 }
