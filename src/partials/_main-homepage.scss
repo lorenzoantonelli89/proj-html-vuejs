@@ -449,6 +449,7 @@
                     }
             }
         }
+        // regole sezione 5 bakery locations
         section.section-fifth{
             @include centring;
             @include display-flex-row(center, center);
@@ -462,6 +463,10 @@
             }
 
             div.box-locations{
+
+                // img:hover{
+                //     transform: scale(1.1);
+                // }
                 
                 h2{
                     @include text-font(36px, $font1, -1px, $color1);
@@ -498,6 +503,104 @@
                         text-decoration: underline;
                     }
                     
+                }
+            }
+        }
+        // regole sezione 6 immagini social IG
+        section.section-sixth{
+            @include centring;
+            margin-top: 250px;
+
+            div.container-up-photo{
+                @include display-flex-row(center, space-between);
+
+                div[class*="card-"]{
+                    height: 368px;
+                }
+                div.card-1{
+                    width: 25%;
+                    background-image: url(img/social-1.jpg);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                div.card-2{
+                    @include display-flex-column(center, center);
+                    width: 46.6%;
+                    margin: 0 1%;
+                    background-color: $color4;
+
+                    span{
+                        @include text-font(12px, $font2, 1px, $color2);
+                    }
+                    h2{
+                        @include text-font(36px, $font1, -1px, $color1);
+                        margin: 30px 0;
+                    }
+                    a{
+                        @include linkButton($color1, $color3);
+
+                        i{
+                            color: $color3;
+                            font-size: 14px;
+                            padding-right: 10px;
+                        }
+                    }
+                    >*:hover{
+                        text-decoration: underline;
+                        &:last-child{
+                            @include linkButton($color3, $color1);
+                            text-decoration: underline;
+                            i{
+                                color: $color1;
+                            }
+                        }
+                    }
+                }
+                div.card-3{
+                    width: 25%;
+                    background-image: url(img/social-2.jpg);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            div.container-down-photo{
+                @include display-flex-row(center, space-between);
+                margin-top: 35px;
+
+                div[class*="card-"]{
+                    height: 380px;
+                }
+                div.card-1{
+                    width: 25%;
+                    background-image: url(img/social-3.jpg);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                div.card-2{
+                    width: 22.5%;
+                    background-image: url(img/social-4.jpg);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    // margin: 0 2.5%;
+                }
+                div.card-3{
+                    width: 22.5%;
+                    background-image: url(img/social-5.jpg);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    // margin: 0 2.5%;
+                }
+                div.card-4{
+                    width: 25%;
+                    background-image: url(img/social-6.jpg);
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
             }
         }
