@@ -1,13 +1,10 @@
-@mixin display-flex-row($var) {
-    display: flex;
-    align-items: center;
-    justify-content: $var;
-}
-
 #app{
+    // regola per header con scroll > 0
     header.active{
-        background-color: #ffff;
+        background-color: $color3;
+        box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
     }
+    // regole header e figli
     header{
         height: 111px;
         width: 100%;
@@ -15,6 +12,7 @@
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 900;
         @include display-flex-row(space-between);
 
         ul{

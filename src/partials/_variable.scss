@@ -1,13 +1,36 @@
 $font1: 'Source Serif Pro', serif;
 $font2: 'Work Sans', sans-serif;
 
-$bg-primary: #fff;
-
 $color1: #55328b;
 $color2: #676361;
+$color3: #ffff;
+$color4: #f0edf5;
+
+@mixin display-flex-row($var) {
+    display: flex;
+    align-items: center;
+    justify-content: $var;
+}
+
+@mixin display-flex-column($var) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: $var;
+}
 
 @mixin centring {
-    width: 93%;
+    width: 80%;
     margin: 0 auto;
+}
+
+@mixin linkButton($bg, $cl) {
+    background-color: $bg;
+    color: $cl;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: $font2;
 }
 

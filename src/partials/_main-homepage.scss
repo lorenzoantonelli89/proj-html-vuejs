@@ -1,11 +1,12 @@
 #app{
+    // regole per il background i header e jumbotron a scroll = 0
     div.container-background-header-jumbo{
         min-height: 800px;
         background-image: url(img/hero-header-bakery.jpg);
         background-size: cover;
         background-position: center;
     }
-
+    // regole jumbotron e figli
     #jumbotron{
         @include centring;
         padding-top: 270px;
@@ -17,7 +18,7 @@
             font-family: $font2;
         }
         h1{
-            width: 20%;
+            width: 25%;
             font-size: 56px;
             letter-spacing: -1px;
             color: $color1;
@@ -25,7 +26,7 @@
             margin-top: 20px;
         }
         p{
-            width: 22%;
+            width: 36%;
             font-size: 18px;
             color: $color2;
             font-family: $font2;
@@ -37,10 +38,375 @@
             font-family: $font2;
             font-weight: bold;
             color: $color1;
-            background-color: #ffff;
+            background-color: $color3;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+        }
+
+        >*:hover{
+            text-decoration: underline;
+            &:last-child{
+                background-color: $color1;
+                color: $color3;
+                text-decoration: none;
+            }
+        }
+    }
+    // regole main
+    main{
+        // regole prima sezione
+        section.section-first{
+            @include centring;
+            @include display-flex-row(space-between);
+            margin-top: 150px;
+            
+            // regole contenitore testo e figli
+            div.content-text{
+                width: 35%;
+
+                span{
+                font-size: 12px;
+                font-family: $font2;
+                letter-spacing: 1px;
+                color: $color2;
+                }
+                h2{
+                    font-size: 36px;
+                    font-family: $font1;
+                    letter-spacing: -1px;
+                    color: $color1;
+                    margin: 30px 0 75px 0;
+                }
+                a{
+                    @include linkButton($color1, $color3);
+                }
+                a:hover{
+                    @include linkButton($color4, $color1);
+                }
+            }
+            // regole carousel sezione 1
+            div.carousel{
+                @include display-flex-row(center);
+
+                div[class*="img-"]:first-child{
+                    margin-right: 20px;
+                }
+                div[class*="img-"]{
+                    position: relative;
+
+                    i{
+                        padding: 35px 13px;
+                        color: $color3;
+                        background-color: rgba($color: $color1, $alpha: 0.5);
+                    }
+                }
+                div.img-1{
+
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+                div.img-2{
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+                // regole div testo nascosto
+                div:hover div.hidden{
+                    visibility: visible;
+                }
+                div.hidden{
+                    width: 400px;
+                    height: 510px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    @include display-flex-column(center);
+                    visibility: hidden;
+
+                    >*{
+                        color: $color3;
+                    }
+                    h3{
+                        font-size: 24px;
+                        font-family: $font1;
+                        letter-spacing: -0.2px;
+                    }
+                    h3:hover{
+                        text-decoration: underline;
+                    }
+                    div:first-of-type{
+                        margin-top: 15px;
+                        margin-bottom: 25px;
+
+                        span{
+                            font-size: 12px;
+                            font-family: $font2;
+                        }
+                        span:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    div:last-of-type{
+                        span{
+                            font-family: $font2;
+                        }
+                        span.dollar, span.value{
+                            font-size: 25px;
+                        }
+                        span.divisor{
+                            font-size: 13px;
+                        }
+                        span.value{
+                            margin-left: -7px;
+                        }
+                        span.divisor{
+                            margin-left: -7px;
+                        }
+                        span.dollar:hover{
+                            border-bottom: 1px dashed $color3;
+                        }
+                        span.underline:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        // regole seconda sezione
+        section.section-second{
+            @include centring;
+            margin-top: 250px;
+
+            div.title{
+                text-align: center;
+
+                span{
+                    font-size: 12px;
+                    font-family: $font2;
+                    letter-spacing: 1px;
+                    color: $color2;
+                }
+                h2{
+                    font-size: 36px;
+                    font-family: $font1;
+                    letter-spacing: -1px;
+                    color: $color1;
+                    margin-top: 35px;
+                    margin-bottom: 75px;
+                }
+                >*:hover{
+                    text-decoration: underline;
+                }
+            }
+            // regole immagini in background normal e in hover
+            div.image-promo{
+                @include display-flex-row(space-around);
+
+                div[class*="promo-"]{
+                    width: 623px;
+                    height: 756px;
+                }
+                div.text-hidden{
+                        height: 100%;
+                        @include display-flex-column(center);
+                        visibility: hidden;
+
+                        span{
+                            font-size: 12px;
+                            font-family: $font2;
+                            letter-spacing: 1px;
+                            color: $color3;
+                        }
+                        h2{
+                            font-size: 36px;
+                            font-family: $font1;
+                            letter-spacing: -1px;
+                            color: $color3;
+                            margin: 40px 0;
+                        }
+                        a{
+                            @include linkButton($color1, $color3);
+                        }
+                    }
+                div.promo-1{
+                    background-image: url(img/corporate-bg.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                div.promo-2{
+                    background-image: url(img/wedding-bg.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                div.promo-1:hover{
+                    background-image: url(img/corporate-hover-bg.jpg);
+
+                    div.text-hidden{
+                        visibility: visible;
+                        
+                        >*:hover{
+                            text-decoration: underline;
+                            &:last-child{
+                                @include linkButton($color4, $color1);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                div.promo-2:hover{
+                    background-image: url(img/wedding-hover-bg.jpg);
+
+                    div.text-hidden{
+                        visibility: visible;
+
+                        >*:hover{
+                            text-decoration: underline;
+                            &:last-child{
+                                @include linkButton($color4, $color1);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // regole sezione 3
+        section.section-third{
+            @include centring;
+            @include display-flex-row(space-between);
+            margin-top: 250px;
+
+            div.content-text{
+                @include display-flex-column(center);
+                text-align: center;
+                width: 21.5%;
+
+                h2{
+                    width: 75%;
+                    font-size: 36px;
+                    font-family: $font1;
+                    letter-spacing: -1px;
+                    color: $color1;
+                }
+                p{
+                    width: 85%;
+                    font-size: 16px;
+                    font-family: $font2;
+                    color: $color2;
+                    margin: 40px 0;
+                }
+                a{
+                    @include linkButton($color1, $color3);
+                }
+            }
+        }
+        // regole sezione 4
+        section.section-fourth{
+            @include centring;
+            margin-top: 250px;
+
+            div[class*="box-"]{
+                position: relative;
+            }
+
+            div.layover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 70px;
+            }
+
+            img{
+                max-width: 100%;
+            }
+            div.box-1{
+                
+                div.layover{
+                    @include display-flex-row(space-around);
+                    align-items: flex-start;
+                    height: 568px;
+
+                    div.text-left{
+                        width: 50%;
+
+                        h2{
+                            width: 60%;
+                            font-size: 56px;
+                            font-family: $font1;
+                            letter-spacing: -1px;
+                            color: $color3;
+                        }
+                    }
+                    div.text-right{
+                        height: 100%;
+                        width: 50%;
+                        @include display-flex-column(space-between);
+                        align-items: flex-end;
+                        
+                        span{
+                            font-size: 96px;
+                            font-family: $font2;
+                            color: $color3;
+                        }
+                        div{
+                            width: 57%;
+                            @include display-flex-column(center);
+                            align-items: flex-start;
+
+                            span{
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                            font-family: $font2;
+                            color: $color3;
+                            }
+                            p{
+                                font-size: 18px;
+                                font-family: $font2;
+                                color: $color3;
+                                margin-top: 20px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            div.box-2{
+                @include display-flex-row(space-between);
+                margin-top: 60px;
+
+                div.left, div.right{
+                    width: 745px;
+                    height: 885px;
+                }
+
+                div.left{
+                    background-image: linear-gradient(200deg, rgba(35, 33, 37, 0.2) 0%, rgba(35, 33, 37, 0.7) 100%), url(img/bakery-process-2.jpg);
+                    background-position: right center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    div.layover{
+                        width: 745px;
+                        height: 885px;
+                    }
+                }
+                div.right{
+                    background-color: $color4;
+                }
+            }
         }
     }
 }
