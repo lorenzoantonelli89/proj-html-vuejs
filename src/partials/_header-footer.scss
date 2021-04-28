@@ -56,6 +56,7 @@
             @include display-flex-row(center, space-between);
 
             div.link-list{
+                width: 60%;
                 height: 166px;
                 @include display-flex-column(flex-start, space-around);
                 
@@ -65,9 +66,27 @@
                     li{
                         display: inline-block;
                         margin-right: 50px;
+                        margin-top: 25px;
                         a{
                             @include text-font(16px, $font2, 0, $color1);
                             text-decoration: none;
+
+                            i{
+                                position: relative;
+                            }
+
+                            i::after{
+                                content: "0";
+                                width: 5px;
+                                height: 5px;
+                                line-height: 5px;
+                                background-color: $color4;
+                                padding: 10px;
+                                border-radius: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 20px;
+                            }
                         }
                     }
                     li:hover a{
@@ -76,6 +95,7 @@
                 }
             }
             div.subscribe{
+                width: 40%;
                 height: 144px;
                 @include display-flex-column(center, space-around);
 

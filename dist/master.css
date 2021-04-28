@@ -56,6 +56,7 @@
   justify-content: space-between;
 }
 #app footer section.footer-section-first div.link-list {
+  width: 60%;
   height: 166px;
   display: flex;
   flex-direction: column;
@@ -68,6 +69,7 @@
 #app footer section.footer-section-first div.link-list ul li {
   display: inline-block;
   margin-right: 50px;
+  margin-top: 25px;
 }
 #app footer section.footer-section-first div.link-list ul li a {
   font-size: 16px;
@@ -76,10 +78,26 @@
   color: #55328b;
   text-decoration: none;
 }
+#app footer section.footer-section-first div.link-list ul li a i {
+  position: relative;
+}
+#app footer section.footer-section-first div.link-list ul li a i::after {
+  content: "0";
+  width: 5px;
+  height: 5px;
+  line-height: 5px;
+  background-color: #f0edf5;
+  padding: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
 #app footer section.footer-section-first div.link-list ul li:hover a {
   text-decoration: underline;
 }
 #app footer section.footer-section-first div.subscribe {
+  width: 40%;
   height: 144px;
   display: flex;
   flex-direction: column;
@@ -251,34 +269,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#app main section.section-first div.carousel div[class*=img-]:first-child {
-  margin-right: 20px;
-}
-#app main section.section-first div.carousel div[class*=img-] {
   position: relative;
 }
-#app main section.section-first div.carousel div[class*=img-] i {
+#app main section.section-first div.carousel i {
   padding: 35px 13px;
   color: #ffff;
   background-color: rgba(85, 50, 139, 0.5);
+  z-index: 100;
+  cursor: pointer;
 }
-#app main section.section-first div.carousel div.img-1 i {
+#app main section.section-first div.carousel i:hover {
+  background-color: #55328b;
+}
+#app main section.section-first div.carousel i.fa-chevron-left {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 20px;
   transform: translateY(-50%);
 }
-#app main section.section-first div.carousel div.img-2 i {
+#app main section.section-first div.carousel i.fa-chevron-right {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
 }
-#app main section.section-first div.carousel div:hover div.hidden {
+#app main section.section-first div.carousel div.img.none {
+  display: none;
+}
+#app main section.section-first div.carousel div.img.active {
+  display: block;
+  margin-left: 20px;
+}
+#app main section.section-first div.carousel div.img {
+  position: relative;
+}
+#app main section.section-first div.carousel div.img:hover div.hidden {
   visibility: visible;
 }
-#app main section.section-first div.carousel div.hidden {
+#app main section.section-first div.carousel div.img div.hidden {
   width: 400px;
   height: 510px;
   position: absolute;
@@ -291,47 +319,47 @@
   justify-content: center;
   visibility: hidden;
 }
-#app main section.section-first div.carousel div.hidden > * {
+#app main section.section-first div.carousel div.img div.hidden > * {
   color: #ffff;
 }
-#app main section.section-first div.carousel div.hidden h3 {
+#app main section.section-first div.carousel div.img div.hidden h3 {
   font-size: 24px;
   font-family: "Source Serif Pro", serif;
   letter-spacing: -0.2px;
 }
-#app main section.section-first div.carousel div.hidden h3:hover {
+#app main section.section-first div.carousel div.img div.hidden h3:hover {
   text-decoration: underline;
 }
-#app main section.section-first div.carousel div.hidden div:first-of-type {
+#app main section.section-first div.carousel div.img div.hidden div:first-of-type {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-#app main section.section-first div.carousel div.hidden div:first-of-type span {
+#app main section.section-first div.carousel div.img div.hidden div:first-of-type span {
   font-size: 12px;
   font-family: "Work Sans", sans-serif;
 }
-#app main section.section-first div.carousel div.hidden div:first-of-type span:hover {
+#app main section.section-first div.carousel div.img div.hidden div:first-of-type span:hover {
   text-decoration: underline;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span {
   font-family: "Work Sans", sans-serif;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span.dollar, #app main section.section-first div.carousel div.hidden div:last-of-type span.value {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.dollar, #app main section.section-first div.carousel div.img div.hidden div:last-of-type span.value {
   font-size: 25px;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span.divisor {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.divisor {
   font-size: 13px;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span.value {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.value {
   margin-left: -7px;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span.divisor {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.divisor {
   margin-left: -7px;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span.dollar:hover {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.dollar:hover {
   border-bottom: 1px dashed #ffff;
 }
-#app main section.section-first div.carousel div.hidden div:last-of-type span.underline:hover {
+#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.underline:hover {
   text-decoration: underline;
 }
 #app main section.section-second {
@@ -362,11 +390,11 @@
 #app main section.section-second div.image-promo {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #app main section.section-second div.image-promo div[class*=promo-] {
-  width: 623px;
-  height: 756px;
+  width: 47%;
+  height: 845px;
 }
 #app main section.section-second div.image-promo div.text-hidden {
   height: 100%;
@@ -400,13 +428,13 @@
 }
 #app main section.section-second div.image-promo div.promo-1 {
   background-image: url(img/corporate-bg.jpg);
-  background-position: center center;
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #app main section.section-second div.image-promo div.promo-2 {
   background-image: url(img/wedding-bg.jpg);
-  background-position: center center;
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -487,6 +515,89 @@
   text-decoration: none;
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
+}
+#app main section.section-third div.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+#app main section.section-third div.carousel i {
+  padding: 25px 10px;
+  color: #ffff;
+  background-color: rgba(85, 50, 139, 0.5);
+  z-index: 100;
+  cursor: pointer;
+}
+#app main section.section-third div.carousel i:hover {
+  background-color: #55328b;
+}
+#app main section.section-third div.carousel i.fa-chevron-left {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+#app main section.section-third div.carousel i.fa-chevron-right {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#app main section.section-third div.carousel div.card.none {
+  display: none;
+}
+#app main section.section-third div.carousel div.card.active {
+  display: block;
+  margin-left: 20px;
+}
+#app main section.section-third div.carousel div.card {
+  text-align: center;
+}
+#app main section.section-third div.carousel div.card img:hover div.layover {
+  visibility: visible;
+}
+#app main section.section-third div.carousel div.card div {
+  margin-top: 25px;
+}
+#app main section.section-third div.carousel div.card div a {
+  font-size: 18px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -0.2px;
+  color: #55328b;
+  text-decoration: none;
+}
+#app main section.section-third div.carousel div.card p {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #55328b;
+  margin-top: 25px;
+}
+#app main section.section-third div.carousel div.card div.layover {
+  width: 200px;
+  height: 255px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+#app main section.section-third div.carousel div.card div.layover a {
+  font-size: 13px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 1px;
+  color: #ffff;
+  font-weight: lighter;
+  line-height: 25px;
+  text-decoration: none;
+}
+#app main section.section-third div.carousel div.card div.layover a:hover {
+  text-decoration: underline;
 }
 #app main section.section-fourth {
   width: 83.3%;
@@ -573,9 +684,10 @@
 }
 #app main section.section-fourth div.box-2 div.left, #app main section.section-fourth div.box-2 div.right {
   width: 745px;
-  height: 885px;
+  min-height: 885px;
 }
 #app main section.section-fourth div.box-2 div.left {
+  width: 50%;
   background-image: linear-gradient(200deg, rgba(35, 33, 37, 0.2) 0%, rgba(35, 33, 37, 0.7) 100%), url(img/bakery-process-2.jpg);
   background-position: right center;
   background-repeat: no-repeat;
@@ -583,8 +695,8 @@
   background-color: #232125;
 }
 #app main section.section-fourth div.box-2 div.left div.layover {
-  width: 745px;
-  height: 885px;
+  width: 50%;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -626,6 +738,7 @@
   font-weight: lighter;
 }
 #app main section.section-fourth div.box-2 div.right {
+  width: 50%;
   background-color: #f0edf5;
   padding: 70px;
 }

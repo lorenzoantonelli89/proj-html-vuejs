@@ -33,8 +33,6 @@
                     <!-- ciclo per stampare link da js -->
                     <li v-for="(link, index) in linksHeader">
                         <a href="" v-html="link" @click="clickLink(index)">
-                            <!-- {{link}} -->
-                            
                         </a>
                         <div class="underline" :class="(activeLinkHeader == index) ? 'active' : ''">
                         
@@ -74,76 +72,42 @@
                     </a>
                 </div>
                 <div class="carousel">
-                    <div class="img-1">
-                        <i class="fas fa-chevron-left"></i>
-                        <img src="img/choco-chip-cookies-400x510.jpg" alt="">
+                    <div class="img" v-for="elem in carouselOne" :class="(elem.visibility == false) ? 'none' : 'active'">
+                        <img :src="elem.img" alt="">
                         <div class="hidden">
                             <h3>
-                                Choco Chip Cookies
+                                {{elem.name}}
                             </h3>
                             <div>
                                 <span>
-                                    Cookies,
+                                    {{elem.category1}},
                                 </span>
                                 <span>
-                                    Pastries
+                                    {{elem.category2}}
                                 </span>
                             </div>
                             <div>
                                 <span class="dollar">
-                                    $
+                                    {{elem.currency}}
                                 </span>
                                 <span class="value underline">
-                                    18.00
+                                    {{elem.value1}}
                                 </span>
                                 <span class="divisor underline">
                                     -
                                 </span>
                                 <span class="dollar">
-                                    $
+                                    {{elem.currency}}
                                 </span>
                                 <span class="value underline">
-                                    36.00
+                                    {{elem.value2}}
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div class="img-2">
-                        <i class="fas fa-chevron-right"></i>
-                        <img src="img/strawberry-jam-cookies-400x510.jpg" alt="">
-                        <div class="hidden">
-                            <h3>
-                                Strawberry Jam Cookies
-                            </h3>
-                            <div>
-                                <span>
-                                    Cookies,
-                                </span>
-                                <span>
-                                    Pastries
-                                </span>
-                            </div>
-                            <div>
-                                <span class="dollar">
-                                    $
-                                </span>
-                                <span class="value underline">
-                                    36.00
-                                </span>
-                                <span class="divisor underline">
-                                    -
-                                </span>
-                                <span class="dollar">
-                                    $
-                                </span>
-                                <span class="value underline">
-                                    60.00
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                    <i class="fas fa-chevron-left" @click="sliderOne"></i>
+                    <i class="fas fa-chevron-right" @click="sliderOne"></i>
                 </div>
-
             </section>
             <!-- seconda sezione eventi special -->
             <section class="section-second">
@@ -198,78 +162,28 @@
                         Shop All Products
                     </a>
                 </div>
-                <!-- <div class="carousel">
-                    <div class="img-1">
-                        <i class="fas fa-chevron-left"></i>
-                        <img src="img/choco-chip-cookies-400x510.jpg" alt="">
-                        <div class="hidden">
-                            <h3>
-                                Choco Chip Cookies
-                            </h3>
-                            <div>
-                                <span>
-                                    Cookies,
-                                </span>
-                                <span>
-                                    Pastries
-                                </span>
-                            </div>
-                            <div>
-                                <span class="dollar">
-                                    $
-                                </span>
-                                <span class="value underline">
-                                    18.00
-                                </span>
-                                <span class="divisor underline">
-                                    -
-                                </span>
-                                <span class="dollar">
-                                    $
-                                </span>
-                                <span class="value underline">
-                                    36.00
-                                </span>
-                            </div>
+                <div class="carousel">
+                    <div class="card" v-for="elem in carouselTwo" :class="(elem.visibility == false) ? 'none' : 'active'">
+                        <img :src="elem.img" alt="">
+                        <div>
+                            <a href="">
+                                {{elem.name}}
+                            </a>
+                        </div>
+                        <p>
+                            {{elem.value}}
+                        </p>
+                        <div class="layover">
+
+                            <a href="">
+                                SELECT OPTION / QUICK VIEW
+                            </a>
+
                         </div>
                     </div>
-                    <div class="img-2">
-                        <i class="fas fa-chevron-right"></i>
-                        <img src="img/strawberry-jam-cookies-400x510.jpg" alt="">
-                        <div class="hidden">
-                            <h3>
-                                Strawberry Jam Cookies
-                            </h3>
-                            <div>
-                                <span>
-                                    Cookies,
-                                </span>
-                                <span>
-                                    Pastries
-                                </span>
-                            </div>
-                            <div>
-                                <span class="dollar">
-                                    $
-                                </span>
-                                <span class="value underline">
-                                    36.00
-                                </span>
-                                <span class="divisor underline">
-                                    -
-                                </span>
-                                <span class="dollar">
-                                    $
-                                </span>
-                                <span class="value underline">
-                                    60.00
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
+                    <i class="fas fa-chevron-left" @click="sliderTwo"></i>
+                    <i class="fas fa-chevron-right" @click="sliderTwo"></i>
+                </div>
             </section>
             <!-- sezione quattro 3 blocchi immagini e testo -->
             <section class="section-fourth">

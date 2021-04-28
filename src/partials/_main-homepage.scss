@@ -73,98 +73,106 @@
             // regole carousel sezione 1
             div.carousel{
                 @include display-flex-row(center, center);
+                position: relative;
 
-                div[class*="img-"]:first-child{
-                    margin-right: 20px;
+                // regole chevron change img
+                i{
+                    padding: 35px 13px;
+                    color: $color3;
+                    background-color: rgba($color: $color1, $alpha: 0.5);
+                    z-index: 100;
+                    cursor: pointer;
                 }
-                div[class*="img-"]{
-                    position: relative;
-
-                    i{
-                        padding: 35px 13px;
-                        color: $color3;
-                        background-color: rgba($color: $color1, $alpha: 0.5);
-                    }
+                i:hover{
+                    background-color: $color1;
                 }
-                div.img-1{
-
-                    i{
+                i.fa-chevron-left{
                         position: absolute;
                         top: 50%;
-                        left: 0;
+                        left: 20px;
                         transform: translateY(-50%);
-                    }
                 }
-                div.img-2{
-                    i{
+                i.fa-chevron-right{
                         position: absolute;
                         top: 50%;
                         right: 0;
                         transform: translateY(-50%);
-                    }
+                }
+                // regole div img
+                div.img.none{
+                    display: none;
+                }
+                div.img.active{
+                    display: block;
+                    margin-left: 20px;
                 }
                 // regole div testo nascosto
-                div:hover div.hidden{
+                div.img{
+                    position: relative;
+
+                    &:hover div.hidden{
                     visibility: visible;
-                }
-                div.hidden{
-                    width: 400px;
-                    height: 510px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background-color: rgba(0, 0, 0, 0.4);
-                    @include display-flex-column(center, center);
-                    visibility: hidden;
+                    }
+                    div.hidden{
+                        width: 400px;
+                        height: 510px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        @include display-flex-column(center, center);
+                        visibility: hidden;
 
-                    >*{
-                        color: $color3;
-                    }
-                    h3{
-                        font-size: 24px;
-                        font-family: $font1;
-                        letter-spacing: -0.2px;
-                    }
-                    h3:hover{
-                        text-decoration: underline;
-                    }
-                    div:first-of-type{
-                        margin-top: 15px;
-                        margin-bottom: 25px;
-
-                        span{
-                            font-size: 12px;
-                            font-family: $font2;
+                        >*{
+                            color: $color3;
                         }
-                        span:hover{
+                        h3{
+                            font-size: 24px;
+                            font-family: $font1;
+                            letter-spacing: -0.2px;
+                        }
+                        h3:hover{
                             text-decoration: underline;
                         }
+                        div:first-of-type{
+                            margin-top: 15px;
+                            margin-bottom: 25px;
+
+                            span{
+                                font-size: 12px;
+                                font-family: $font2;
+                            }
+                            span:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                        div:last-of-type{
+                            span{
+                                font-family: $font2;
+                            }
+                            span.dollar, span.value{
+                                font-size: 25px;
+                            }
+                            span.divisor{
+                                font-size: 13px;
+                            }
+                            span.value{
+                                margin-left: -7px;
+                            }
+                            span.divisor{
+                                margin-left: -7px;
+                            }
+                            span.dollar:hover{
+                                border-bottom: 1px dashed $color3;
+                            }
+                            span.underline:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                        
                     }
-                    div:last-of-type{
-                        span{
-                            font-family: $font2;
-                        }
-                        span.dollar, span.value{
-                            font-size: 25px;
-                        }
-                        span.divisor{
-                            font-size: 13px;
-                        }
-                        span.value{
-                            margin-left: -7px;
-                        }
-                        span.divisor{
-                            margin-left: -7px;
-                        }
-                        span.dollar:hover{
-                            border-bottom: 1px dashed $color3;
-                        }
-                        span.underline:hover{
-                            text-decoration: underline;
-                        }
-                    }
-                    
                 }
+                
             }
         }
         // regole seconda sezione
@@ -189,11 +197,11 @@
             }
             // regole immagini in background normal e in hover
             div.image-promo{
-                @include display-flex-row(center, space-around);
+                @include display-flex-row(center, space-between);
 
                 div[class*="promo-"]{
-                    width: 623px;
-                    height: 756px;
+                    width: 47%;
+                    height: 845px;
                 }
                 div.text-hidden{
                         height: 100%;
@@ -213,13 +221,13 @@
                     }
                 div.promo-1{
                     background-image: url(img/corporate-bg.jpg);
-                    background-position: center center;
+                    background-position: left top;
                     background-repeat: no-repeat;
                     background-size: cover;
                 }
                 div.promo-2{
                     background-image: url(img/wedding-bg.jpg);
-                    background-position: center center;
+                    background-position: left top;
                     background-repeat: no-repeat;
                     background-size: cover;
                 }
@@ -277,6 +285,83 @@
                 }
                 a{
                     @include linkButton($color1, $color3);
+                }
+            }
+            div.carousel{
+                @include display-flex-row(center, space-around);
+                position: relative;
+
+                i{
+                    padding: 25px 10px;
+                    color: $color3;
+                    background-color: rgba($color: $color1, $alpha: 0.5);
+                    z-index: 100;
+                    cursor: pointer;
+                }
+                i:hover{
+                    background-color: $color1;
+                }
+                i.fa-chevron-left{
+                        position: absolute;
+                        top: 55%;
+                        left: 20px;
+                        transform: translateY(-50%);
+                }
+                i.fa-chevron-right{
+                        position: absolute;
+                        top: 55%;
+                        right: 0;
+                        transform: translateY(-50%);
+                }
+
+                div.card.none{
+                    display: none;
+                }
+                div.card.active{
+                    display: block;
+                    margin-left: 20px;
+                }
+
+                div.card{
+                    text-align: center;
+
+                    img:hover div.layover{
+                        visibility: visible;
+                    }
+
+                    div{
+                        margin-top: 25px; 
+
+                        a{
+                            @include text-font(18px, $font1, -0.2px, $color1);
+                            text-decoration: none;
+                        }
+                    }
+                    p{
+                        @include text-font(14px, $font2, 0, $color1);
+                        margin-top: 25px;
+                    }
+                    div.layover{
+                        width: 200px;
+                        height: 255px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        @include display-flex-column(center, center);
+                        visibility: hidden;
+
+                        a{
+                            @include text-font(13px, $font2, 1px, $color3);
+                            font-weight: lighter;
+                            line-height: 25px;
+                            text-decoration: none;
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -350,10 +435,11 @@
 
                 div.left, div.right{
                     width: 745px;
-                    height: 885px;
+                    min-height: 885px;
                 }
 
                 div.left{
+                    width: 50%;
                     background-image: linear-gradient(200deg, rgba(35, 33, 37, 0.2) 0%, rgba(35, 33, 37, 0.7) 100%), url(img/bakery-process-2.jpg);
                     background-position: right center;
                     background-repeat: no-repeat;
@@ -361,8 +447,8 @@
                     background-color: rgb(35, 33, 37);
 
                     div.layover{
-                        width: 745px;
-                        height: 885px;
+                        width: 50%;
+                        height: 100%;
                         @include display-flex-row(flex-start, space-between);
 
                         div.text-left{
@@ -394,6 +480,7 @@
                     }
                 }
                 div.right{
+                    width: 50%;
                     background-color: $color4;
                     padding: 70px;
 
