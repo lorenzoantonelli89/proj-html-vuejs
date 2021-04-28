@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="master.css">
 </head>
 <body>
-    <div id="app" :class="(activeMap == true) ? 'background' : ''">
+    <div id="app">
         <div class="container-background-header-jumbo">
             <!-- sezione intestazione pagina -->
             <header :class="(scrollOn == true) ? 'active' : ''">
@@ -167,8 +167,17 @@
                 <div class="carousel">
                     <!-- ciclo immagini e testo da array carouselOne e aggiungo display block o none con una classe bindata in base alla visibility del oggetto -->
                     <div class="card" v-for="elem in carouselTwo" :class="(elem.visibility == false) ? 'none' : 'active'">
-                        <img :src="elem.img" alt="">
-                        <div>
+                        <div class="content-img">
+                            <img :src="elem.img" alt="">
+                            <div class="layover">
+                            
+                                <a href="">
+                                    SELECT OPTION / QUICK VIEW
+                                </a>
+                            
+                            </div>
+                        </div>
+                        <div class="content-link">
                             <a href="">
                                 {{elem.name}}
                             </a>
@@ -176,13 +185,6 @@
                         <p>
                             {{elem.value}}
                         </p>
-                        <div class="layover">
-
-                            <a href="">
-                                SELECT OPTION / QUICK VIEW
-                            </a>
-
-                        </div>
                     </div>
                     <i class="fas fa-chevron-left" @click="sliderTwo"></i>
                     <i class="fas fa-chevron-right" @click="sliderTwo"></i>

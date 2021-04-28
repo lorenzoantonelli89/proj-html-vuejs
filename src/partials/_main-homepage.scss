@@ -325,11 +325,37 @@
                 div.card{
                     text-align: center;
 
-                    img:hover div.layover{
-                        visibility: visible;
-                    }
+                    div.content-img{
+                        position: relative;
+                        
+                        div.layover{
+                        width: 200px;
+                        height: 255px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        @include display-flex-column(center, center);
+                        visibility: hidden;
 
-                    div{
+                            a{
+                                @include text-font(13px, $font2, 1px, $color3);
+                                font-weight: lighter;
+                                line-height: 25px;
+                                text-decoration: none;
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        &:hover div.layover{
+                            visibility: visible;
+                        }
+                    }
+                    
+
+                    div.content-link{
                         margin-top: 25px; 
 
                         a{
@@ -341,27 +367,7 @@
                         @include text-font(14px, $font2, 0, $color1);
                         margin-top: 25px;
                     }
-                    div.layover{
-                        width: 200px;
-                        height: 255px;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: rgba(0, 0, 0, 0.1);
-                        @include display-flex-column(center, center);
-                        visibility: hidden;
-
-                        a{
-                            @include text-font(13px, $font2, 1px, $color3);
-                            font-weight: lighter;
-                            line-height: 25px;
-                            text-decoration: none;
-
-                            &:hover{
-                                text-decoration: underline;
-                            }
-                        }
-                    }
+                    
                 }
             }
         }

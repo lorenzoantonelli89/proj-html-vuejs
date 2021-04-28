@@ -551,27 +551,10 @@
 #app main section.section-third div.carousel div.card {
   text-align: center;
 }
-#app main section.section-third div.carousel div.card img:hover div.layover {
-  visibility: visible;
+#app main section.section-third div.carousel div.card div.content-img {
+  position: relative;
 }
-#app main section.section-third div.carousel div.card div {
-  margin-top: 25px;
-}
-#app main section.section-third div.carousel div.card div a {
-  font-size: 18px;
-  font-family: "Source Serif Pro", serif;
-  letter-spacing: -0.2px;
-  color: #55328b;
-  text-decoration: none;
-}
-#app main section.section-third div.carousel div.card p {
-  font-size: 14px;
-  font-family: "Work Sans", sans-serif;
-  letter-spacing: 0;
-  color: #55328b;
-  margin-top: 25px;
-}
-#app main section.section-third div.carousel div.card div.layover {
+#app main section.section-third div.carousel div.card div.content-img div.layover {
   width: 200px;
   height: 255px;
   position: absolute;
@@ -584,7 +567,7 @@
   justify-content: center;
   visibility: hidden;
 }
-#app main section.section-third div.carousel div.card div.layover a {
+#app main section.section-third div.carousel div.card div.content-img div.layover a {
   font-size: 13px;
   font-family: "Work Sans", sans-serif;
   letter-spacing: 1px;
@@ -593,8 +576,28 @@
   line-height: 25px;
   text-decoration: none;
 }
-#app main section.section-third div.carousel div.card div.layover a:hover {
+#app main section.section-third div.carousel div.card div.content-img div.layover a:hover {
   text-decoration: underline;
+}
+#app main section.section-third div.carousel div.card div.content-img:hover div.layover {
+  visibility: visible;
+}
+#app main section.section-third div.carousel div.card div.content-link {
+  margin-top: 25px;
+}
+#app main section.section-third div.carousel div.card div.content-link a {
+  font-size: 18px;
+  font-family: "Source Serif Pro", serif;
+  letter-spacing: -0.2px;
+  color: #55328b;
+  text-decoration: none;
+}
+#app main section.section-third div.carousel div.card p {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0;
+  color: #55328b;
+  margin-top: 25px;
 }
 #app main section.section-fourth {
   width: 83.3%;
