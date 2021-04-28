@@ -272,10 +272,10 @@
             div.content-text{
                 @include display-flex-column(center, center);
                 text-align: center;
-                width: 21.5%;
+                width: 28.5%;
 
                 h2{
-                    width: 75%;
+                    width: 85%;
                     @include text-font(36px, $font1, -1px, $color1);
                 }
                 p{
@@ -544,9 +544,45 @@
         }
         // regole sezione 5 bakery locations
         section.section-fifth{
+            position: relative;
             @include centring;
             @include display-flex-row(center, center);
             margin-top: 250px;
+
+            div.maps{
+                    width: 1100px;
+                    height: 750px;
+                    background-color: $color3;
+                    border: 1px solid #000;
+                    border-radius: 15px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: none;
+
+                    div{
+                        height: 50px;
+                        @include display-flex-row(center, space-between);
+                        padding: 0 50px;
+                        border-bottom: 1px solid $color2;
+                        h2{
+                            @include text-font(25px, $font2, -1px, $color1);
+                        }
+                        i{
+                            color: $color2;
+                            cursor: pointer;
+                        }
+                    }
+
+                    img{
+                        margin: 25px 50px 25px 50px;
+                    }
+            }
+
+            div.maps.active{
+                display: block;
+            }
 
             div.box-locations.lightblue{
                 background-color: #f1f9fb;
@@ -597,6 +633,7 @@
                     }
                     
                 }
+                
             }
         }
         // regole sezione 6 immagini social IG

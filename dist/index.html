@@ -15,6 +15,7 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
     <title>Bakery</title>
     <!-- link vueJs -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -24,7 +25,7 @@
     <link rel="stylesheet" href="master.css">
 </head>
 <body>
-    <div id="app" >
+    <div id="app" :class="(activeMap == true) ? 'background' : ''">
         <div class="container-background-header-jumbo">
             <!-- sezione intestazione pagina -->
             <header :class="(scrollOn == true) ? 'active' : ''">
@@ -72,6 +73,7 @@
                     </a>
                 </div>
                 <div class="carousel">
+                    <!-- ciclo immagini e testo da array carouselOne e aggiungo display block o none con una classe bindata in base alla visibility del oggetto -->
                     <div class="img" v-for="elem in carouselOne" :class="(elem.visibility == false) ? 'none' : 'active'">
                         <img :src="elem.img" alt="">
                         <div class="hidden">
@@ -163,6 +165,7 @@
                     </a>
                 </div>
                 <div class="carousel">
+                    <!-- ciclo immagini e testo da array carouselOne e aggiungo display block o none con una classe bindata in base alla visibility del oggetto -->
                     <div class="card" v-for="elem in carouselTwo" :class="(elem.visibility == false) ? 'none' : 'active'">
                         <img :src="elem.img" alt="">
                         <div>
@@ -275,6 +278,7 @@
             </section>
             <!-- sezione cinque visita la tua bakery London/NewYork -->
             <section class="section-fifth">
+                <!-- ciclo e stampo gli oggetti in array locations -->
                 <div class="box-locations" v-for="(elem, index) in locations" :class="(index == 0) ? 'lightblue' : 'lightyellow'">
                     <img :src="elem.img" alt="">
                     <h2>
@@ -297,16 +301,26 @@
                                 {{elem.openingTime}}
                             </span>
                         </div>
-                        <a href="">
+                        <a @click="viewMap(elem)" >
                             View Map
                         </a>
                     </div>
-
+                </div>
+                <div class="maps" :class="(activeMap == true) ? 'active' : ''">
+                    <div>
+                        <h2>
+                            {{activeLocation.city}} Bakery
+                        </h2>
+                        <i class="fas fa-times" @click="closeMap"></i>
+                    </div>
+                    <img :src="activeLocation.imgMap" alt="">
+                
                 </div>
             </section>
             <!-- sezione sei immagini instagram follow us -->
             <section class="section-sixth">
                 <div class="container-up-photo">
+                    <!-- tutte le card hanno immagine in background nel css tranne la card 2 che ha del testo -->
                     <div class="card-1"></div>
                     <div class="card-2">
                         <span>
@@ -328,7 +342,6 @@
                     <div class="card-3"></div>
                     <div class="card-4"></div>
                 </div>
-
             </section>
             <!-- sezione sette ordina e ricevi a casa -->
             <section class="section-seventh">
@@ -364,10 +377,10 @@
                         Subscribe to our Newsletter
                     </h3>
                     <div>
-                        <input type="text" placeholder="Enter email address*" v-model="inputEmail">
-                        <a href="">
+                        <input type="text" placeholder="Enter email address*" v-model="inputEmail" @keyup.enter="getEmail">
+                        <button @click="getEmail">
                             Subscribe
-                        </a>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -391,6 +404,7 @@
                     </span>
                 </div>
                 <ul>
+                    <!-- ciclo lista icona social font awsome aggiungendo la classe bindata icon che corrisponde ad una stringa in array contenente il nome del social -->
                     <li v-for="icon in socialIcons">
                         <a href="">
                             <i class="fab" :class='icon'></i>
@@ -400,8 +414,5 @@
             </section>
         </footer>
     </div>
-    
-
-    
 </body>
 </html>

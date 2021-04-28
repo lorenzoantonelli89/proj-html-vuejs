@@ -7,10 +7,14 @@
   \*********************/
 /***/ (() => {
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function initVue() {
+  var _data;
+
   new Vue({
     el: '#app',
-    data: {
+    data: (_data = {
       'logo': 'img/avada-bakery-logo.png',
       'linksHeader': ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT', '<i class="fas fa-shopping-cart"></i>'],
       'activeLinkHeader': 0,
@@ -56,12 +60,14 @@ function initVue() {
         img: 'img/new-york-bk-800x530.jpg',
         city: 'New York',
         phone: '1.800.458.556',
-        openingTime: '9:00 AM - 6:00 PM'
+        openingTime: '9:00 AM - 6:00 PM',
+        imgMap: 'img/new-york.png'
       }, {
         img: 'img/london-bk-800x530.jpg',
         city: 'London',
         phone: '1.800.458.556',
-        openingTime: '9:00 AM - 6:00 PM'
+        openingTime: '9:00 AM - 6:00 PM',
+        imgMap: 'img/london.png'
       }],
       'carouselTwo': [{
         img: 'img/choco-chip-cookies-200x255.jpg',
@@ -126,12 +132,14 @@ function initVue() {
       }],
       'linksFooter': ['Shop', 'About', 'Gallery', 'Locations', 'Journal', 'Contact', 'Orders', '<i class="fas fa-shopping-cart"></i>'],
       'inputEmail': '',
-      'socialIcons': ['fa-instagram', 'fa-twitter', 'fa-facebook-f', 'fa-pinterest-p']
-    },
+      'socialIcons': ['fa-instagram', 'fa-twitter', 'fa-facebook-f', 'fa-pinterest-p'],
+      'emails': []
+    }, _defineProperty(_data, "inputEmail", ''), _defineProperty(_data, 'activeMap', false), _defineProperty(_data, 'activeLocation', ''), _data),
     mounted: function mounted() {
       document.addEventListener('scroll', this.scrollUp);
     },
     methods: {
+      // funziona per gestire il cambio background header con lo scroll
       scrollUp: function scrollUp() {
         this.scrollOn = true;
 
@@ -139,10 +147,13 @@ function initVue() {
           this.scrollOn = false;
         }
       },
+      // funzione per avere il link header attivo e con underline 
       clickLink: function clickLink(index) {
         this.activeLinkHeader = index;
       },
+      // funzione per slider della sezione 1 
       sliderOne: function sliderOne() {
+        // verifico se le prime 2 hanno visibilità true le passo a false e metto true le altre al contrario con else if
         if (this.carouselOne[0].visibility == true && this.carouselOne[1].visibility == true) {
           this.carouselOne[0].visibility = false;
           this.carouselOne[1].visibility = false;
@@ -155,7 +166,9 @@ function initVue() {
           this.carouselOne[1].visibility = true;
         }
       },
+      // slider sezione 3 
       sliderTwo: function sliderTwo() {
+        // verifico se le prime 4 hanno visibilità true le passo a false e metto true le altre al contrario con else if e ancora con il secondo else if
         if (this.carouselTwo[0].visibility == true && this.carouselTwo[1].visibility == true && this.carouselTwo[2].visibility == true && this.carouselTwo[3].visibility == true) {
           this.carouselTwo[0].visibility = false;
           this.carouselTwo[1].visibility = false;
@@ -184,6 +197,19 @@ function initVue() {
           this.carouselTwo[2].visibility = true;
           this.carouselTwo[3].visibility = true;
         }
+      },
+      viewMap: function viewMap(elem) {
+        this.activeLocation = elem;
+        this.activeMap = true;
+        console.log(this.activeLocation);
+      },
+      closeMap: function closeMap() {
+        this.activeMap = false;
+      },
+      // funzione per pushare dentro array email inserita
+      getEmail: function getEmail() {
+        this.emails.push(this.inputEmail);
+        this.inputEmail = '';
       }
     },
     computed: {}

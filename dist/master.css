@@ -114,23 +114,20 @@
   text-decoration: underline;
 }
 #app footer section.footer-section-first div.subscribe div input {
-  padding: 10px 70px 10px 10px;
+  padding: 15px 80px 15px 20px;
   border: 1px solid #f0edf5;
   border-radius: 3px;
   margin-right: 5px;
 }
-#app footer section.footer-section-first div.subscribe div a {
-  font-size: 14px;
-  font-family: "Work Sans", sans-serif;
-  letter-spacing: 0;
+#app footer section.footer-section-first div.subscribe div button {
   color: #ffff;
-  font-weight: bold;
   background-color: #55328b;
-  padding: 10px 50px;
-  text-decoration: none;
+  padding: 15px 50px;
   border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
-#app footer section.footer-section-first div.subscribe div a:hover {
+#app footer section.footer-section-first div.subscribe div button:hover {
   background-color: #f0edf5;
   color: #55328b;
   text-decoration: none;
@@ -490,10 +487,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 21.5%;
+  width: 28.5%;
 }
 #app main section.section-third div.content-text h2 {
-  width: 75%;
+  width: 85%;
   font-size: 36px;
   font-family: "Source Serif Pro", serif;
   letter-spacing: -1px;
@@ -816,12 +813,49 @@
   font-weight: lighter;
 }
 #app main section.section-fifth {
+  position: relative;
   width: 83.3%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 250px;
+}
+#app main section.section-fifth div.maps {
+  width: 1100px;
+  height: 750px;
+  background-color: #ffff;
+  border: 1px solid #000;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#app main section.section-fifth div.maps div {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  border-bottom: 1px solid #676361;
+}
+#app main section.section-fifth div.maps div h2 {
+  font-size: 25px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: -1px;
+  color: #55328b;
+}
+#app main section.section-fifth div.maps div i {
+  color: #676361;
+  cursor: pointer;
+}
+#app main section.section-fifth div.maps img {
+  margin: 25px 50px 25px 50px;
+}
+#app main section.section-fifth div.maps.active {
+  display: block;
 }
 #app main section.section-fifth div.box-locations.lightblue {
   background-color: #f1f9fb;

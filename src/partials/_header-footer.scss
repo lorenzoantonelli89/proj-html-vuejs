@@ -74,7 +74,7 @@
                             i{
                                 position: relative;
                             }
-
+                            // numero 0 vicino al carrello nel footer 
                             i::after{
                                 content: "0";
                                 width: 5px;
@@ -107,20 +107,20 @@
                 }
                 div{
                     input{
-                        padding: 10px 70px 10px 10px;
+                        padding: 15px 80px 15px 20px;
                         border: 1px solid $color4;
                         border-radius: 3px;
                         margin-right: 5px;
                     }
-                    a{
-                        @include text-font(14px, $font2, 0, $color3);
-                        font-weight: bold;
+                    button{
+                        color: $color3;
                         background-color: $color1;
-                        padding: 10px 50px;
-                        text-decoration: none;
+                        padding: 15px 50px;
                         border-radius: 5px;
+                        cursor: pointer;
+                        border: none;
                     }
-                    a:hover{
+                    button:hover{
                         background-color: $color4;
                         color: $color1;
                         text-decoration: none;
