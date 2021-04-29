@@ -166,6 +166,23 @@
   text-decoration: none;
 }
 
+#app div#scroll-up {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 13px;
+  border-radius: 5px;
+  position: fixed;
+  right: 75px;
+  top: 85vh;
+  display: none;
+  cursor: pointer;
+}
+#app div#scroll-up i {
+  color: #ffff;
+  font-size: 20px;
+}
+#app div#scroll-up.active {
+  display: block;
+}
 #app div.container-background-header-jumbo {
   min-height: 800px;
   background-image: url(img/hero-header-bakery.jpg);
@@ -268,6 +285,9 @@
   justify-content: center;
   position: relative;
 }
+#app main section.section-first div.carousel div.img:first-child {
+  margin-right: 25px;
+}
 #app main section.section-first div.carousel i {
   padding: 35px 13px;
   color: #ffff;
@@ -281,7 +301,7 @@
 #app main section.section-first div.carousel i.fa-chevron-left {
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 0;
   transform: translateY(-50%);
 }
 #app main section.section-first div.carousel i.fa-chevron-right {
@@ -289,13 +309,6 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-}
-#app main section.section-first div.carousel div.img.none {
-  display: none;
-}
-#app main section.section-first div.carousel div.img.active {
-  display: block;
-  margin-left: 20px;
 }
 #app main section.section-first div.carousel div.img {
   position: relative;
@@ -541,15 +554,9 @@
   right: 0;
   transform: translateY(-50%);
 }
-#app main section.section-third div.carousel div.card.none {
-  display: none;
-}
-#app main section.section-third div.carousel div.card.active {
-  display: block;
-  margin-left: 20px;
-}
 #app main section.section-third div.carousel div.card {
   text-align: center;
+  margin-left: 20px;
 }
 #app main section.section-third div.carousel div.card div.content-img {
   position: relative;

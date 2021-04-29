@@ -17,47 +17,48 @@ function initVue() {
             ],
             'activeLinkHeader': 0,
             'scrollOn': false,
+            'indexCarousel': 0,
             'carouselOne': [
-                {
-                    img: 'img/choco-chip-cookies-400x510.jpg',
-                    name: 'Choco Chip Cookies',
-                    category1: 'Cookies',
-                    category2: 'Pastries',
-                    currency: '$',
-                    value1: '18.00',
-                    value2: '36.00',
-                    visibility: true,
-                },
-                {
-                    img: 'img/strawberry-jam-cookies-400x510.jpg',
-                    name: 'Strawberry Jam Cookies',
-                    category1: 'Cookies',
-                    category2: 'Pastries',
-                    currency: '$',
-                    value1: '36.00',
-                    value2: '60.00',
-                    visibility: true,
-                },
-                {
-                    img: 'img/cookies-with-ice-cream-400x510.jpg',
-                    name: 'Cookies with ice cream',
-                    category1: 'Cookies',
-                    category2: 'Pastries',
-                    currency: '$',
-                    value1: '18.00',
-                    value2: '34.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/home-bread-400x510.jpg',
-                    name: 'Homemade Bread',
-                    category1: 'Bread',
-                    category2: 'Pastries',
-                    currency: '$',
-                    value1: '26.00',
-                    value2: '68.00',
-                    visibility: false,
-                },
+                [
+                    {
+                        img: 'img/choco-chip-cookies-400x510.jpg',
+                        name: 'Choco Chip Cookies',
+                        category1: 'Cookies',
+                        category2: 'Pastries',
+                        currency: '$',
+                        value1: '18.00',
+                        value2: '36.00',
+                    },
+                    {
+                        img: 'img/strawberry-jam-cookies-400x510.jpg',
+                        name: 'Strawberry Jam Cookies',
+                        category1: 'Cookies',
+                        category2: 'Pastries',
+                        currency: '$',
+                        value1: '36.00',
+                        value2: '60.00',
+                    },
+                ],
+                [
+                    {
+                        img: 'img/cookies-with-ice-cream-400x510.jpg',
+                        name: 'Cookies with ice cream',
+                        category1: 'Cookies',
+                        category2: 'Pastries',
+                        currency: '$',
+                        value1: '18.00',
+                        value2: '34.00',
+                    },
+                    {
+                        img: 'img/home-bread-400x510.jpg',
+                        name: 'Homemade Bread',
+                        category1: 'Bread',
+                        category2: 'Pastries',
+                        currency: '$',
+                        value1: '26.00',
+                        value2: '68.00',
+                    },
+                ],
             ],
             'locations': [
                 {
@@ -76,78 +77,72 @@ function initVue() {
                 }
             ],
             'carouselTwo': [
-                {
-                    img: 'img/choco-chip-cookies-200x255.jpg',
-                    name: 'Choco Chip Cookies',
-                    value: '$18.00 - $32.00',
-                    visibility: true,
-                },
-                {
-                    img: 'img/strawberry-jam-cookies-200x255.jpg',
-                    name: 'Strawberry Jam Cookies',
-                    value: '$36.00 - $60.00',
-                    visibility: true,
-                },
-                {
-                    img: 'img/strawberry-donut-200x255.jpg',
-                    name: 'Strawberry Donut',
-                    value: '$24.00 - $48.00',
-                    visibility: true,
-                },
-                {
-                    img: 'img/perfect-macarons-200x255.jpg',
-                    name: 'Perfect Macarons',
-                    value: '$32.00 - $56.00',
-                    visibility: true,
-                },
-                {
-                    img: 'img/premium-bread-200x255.jpg',
-                    name: 'Premium Bread',
-                    value: '$32.00 - $68.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/cherry-cake-200x255.jpg',
-                    name: 'Cake with Cherry Topping',
-                    value: '$99.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/cookies-with-ice-cream-200x255.jpg',
-                    name: 'Cookies with ice cream',
-                    value: '$18.00 - $34.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/blackberry-stuffed-bread-200x255.jpg',
-                    name: 'Blackberry Stuffed Bread',
-                    value: '$22.00 - $46.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/glazed-pancake-with-lemon-200x255.jpg',
-                    name: 'Glazed Bread with Fruits',
-                    value: '$24.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/small-cupcake-200x255.jpg',
-                    name: 'Chocolate Cupcake',
-                    value: '$26.00 - $68.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/home-bread-200x255.jpg',
-                    name: 'Homemade Bread',
-                    value: '$26.00 - $68.00',
-                    visibility: false,
-                },
-                {
-                    img: 'img/premium-bread-200x255.jpg',
-                    name: 'Premium Bread',
-                    value: '$32.00 - $68.00',
-                    visibility: false,
-                },
+                [
+                    {
+                        img: 'img/choco-chip-cookies-200x255.jpg',
+                        name: 'Choco Chip Cookies',
+                        value: '$18.00 - $32.00',
+                    },
+                    {
+                        img: 'img/strawberry-jam-cookies-200x255.jpg',
+                        name: 'Strawberry Jam Cookies',
+                        value: '$36.00 - $60.00',
+                    },
+                    {
+                        img: 'img/strawberry-donut-200x255.jpg',
+                        name: 'Strawberry Donut',
+                        value: '$24.00 - $48.00',
+                    },
+                    {
+                        img: 'img/perfect-macarons-200x255.jpg',
+                        name: 'Perfect Macarons',
+                        value: '$32.00 - $56.00',
+                    },
+                ],
+                [
+                    {
+                        img: 'img/premium-bread-200x255.jpg',
+                        name: 'Premium Bread',
+                        value: '$32.00 - $68.00',
+                    },
+                    {
+                        img: 'img/cherry-cake-200x255.jpg',
+                        name: 'Cake with Cherry Topping',
+                        value: '$99.00',
+                    },
+                    {
+                        img: 'img/cookies-with-ice-cream-200x255.jpg',
+                        name: 'Cookies with ice cream',
+                        value: '$18.00 - $34.00',
+                    },
+                    {
+                        img: 'img/blackberry-stuffed-bread-200x255.jpg',
+                        name: 'Blackberry Stuffed Bread',
+                        value: '$22.00 - $46.00',
+                    },
+                ],
+                [
+                    {
+                        img: 'img/glazed-pancake-with-lemon-200x255.jpg',
+                        name: 'Glazed Bread with Fruits',
+                        value: '$24.00',
+                    },
+                    {
+                        img: 'img/small-cupcake-200x255.jpg',
+                        name: 'Chocolate Cupcake',
+                        value: '$26.00 - $68.00',
+                    },
+                    {
+                        img: 'img/home-bread-200x255.jpg',
+                        name: 'Homemade Bread',
+                        value: '$26.00 - $68.00',
+                    },
+                    {
+                        img: 'img/premium-bread-200x255.jpg',
+                        name: 'Premium Bread',
+                        value: '$32.00 - $68.00',
+                    },
+                ],
             ],
             'linksFooter': [
                 'Shop',
@@ -170,10 +165,12 @@ function initVue() {
             'inputEmail': '',
             'activeMap': false,
             'activeLocation': '',
+            'scrollToDown': false,
 
         },
         mounted() {
-            document.addEventListener('scroll', this.scrollUp)
+            document.addEventListener('scroll', this.scrollUp);
+            document.addEventListener('scroll', this.scrollDown);
         },
         methods: {
             // funziona per gestire il cambio background header con lo scroll
@@ -183,64 +180,42 @@ function initVue() {
                     this.scrollOn = false;
                 }
             },
+            // funzione per far apparire e scomparire il bottone che cliccando porta la pagina a inizio
+            scrollDown: function () {
+                this.scrollToDown = true;
+                if(window.scrollY < 300){
+                    this.scrollToDown = false;
+                }
+            },
+            // funzione che al click riporta la pagina a top 0
+            scrollToUp: function () {
+                window.scrollTo({ top: 0, behavior: 'smooth'});
+            },
             // funzione per avere il link header attivo e con underline 
             clickLink: function (index) {
                 this.activeLinkHeader = index;
             },
-            // funzione per slider della sezione 1 
-            sliderOne: function () {
-                // verifico se le prime 2 hanno visibilità true le passo a false e metto true le altre al contrario con else if
-                if (this.carouselOne[0].visibility == true && this.carouselOne[1].visibility == true){
-                    this.carouselOne[0].visibility = false; 
-                    this.carouselOne[1].visibility = false;
-                    this.carouselOne[2].visibility = true;
-                    this.carouselOne[3].visibility = true;
-
-                }else if (this.carouselOne[2].visibility == true && this.carouselOne[3].visibility == true){
-                    this.carouselOne[2].visibility = false;
-                    this.carouselOne[3].visibility = false;
-                    this.carouselOne[0].visibility = true;
-                    this.carouselOne[1].visibility = true;
-                    
+            // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
+            prevSlide: function (arr) {
+                this.indexCarousel--
+                if (this.indexCarousel < 0) {
+                    this.indexCarousel = arr.length - 1;
                 }
             },
-            // slider sezione 3 
-            sliderTwo: function () {
-                // verifico se le prime 4 hanno visibilità true le passo a false e metto true le altre al contrario con else if e ancora con il secondo else if
-                if (this.carouselTwo[0].visibility == true && this.carouselTwo[1].visibility == true && this.carouselTwo[2].visibility == true && this.carouselTwo[3].visibility == true) {
-                    this.carouselTwo[0].visibility = false;
-                    this.carouselTwo[1].visibility = false;
-                    this.carouselTwo[2].visibility = false;
-                    this.carouselTwo[3].visibility = false;
-                    this.carouselTwo[4].visibility = true;
-                    this.carouselTwo[5].visibility = true;
-                    this.carouselTwo[6].visibility = true;
-                    this.carouselTwo[7].visibility = true;
-                } else if (this.carouselTwo[4].visibility == true && this.carouselTwo[5].visibility == true && this.carouselTwo[6].visibility == true && this.carouselTwo[7].visibility == true) {
-                    this.carouselTwo[4].visibility = false;
-                    this.carouselTwo[5].visibility = false;
-                    this.carouselTwo[6].visibility = false;
-                    this.carouselTwo[7].visibility = false;
-                    this.carouselTwo[8].visibility = true;
-                    this.carouselTwo[9].visibility = true;
-                    this.carouselTwo[10].visibility = true;
-                    this.carouselTwo[11].visibility = true;
-                } else if (this.carouselTwo[8].visibility == true && this.carouselTwo[9].visibility == true && this.carouselTwo[10].visibility == true && this.carouselTwo[11].visibility == true) {
-                    this.carouselTwo[8].visibility = false;
-                    this.carouselTwo[9].visibility = false;
-                    this.carouselTwo[10].visibility = false;
-                    this.carouselTwo[11].visibility = false;
-                    this.carouselTwo[0].visibility = true;
-                    this.carouselTwo[1].visibility = true;
-                    this.carouselTwo[2].visibility = true;
-                    this.carouselTwo[3].visibility = true;
+            // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
+            nextSlide: function (arr) {
+                this.indexCarousel++
+                if(this.indexCarousel >= arr.length){
+                    this.indexCarousel = 0;
                 }
             },
+            // funzione per rendere la mappa della location visibile al click
             viewMap: function (elem) {
                 this.activeLocation = elem;
                 this.activeMap = true;
                 console.log(this.activeLocation);
             },
+            // funzione che chiude la mappa al click
             closeMap: function () {
                 this.activeMap = false;
             },

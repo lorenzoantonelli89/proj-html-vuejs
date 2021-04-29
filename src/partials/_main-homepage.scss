@@ -1,4 +1,22 @@
 #app{
+    div#scroll-up{
+        background-color: rgba($color: #000, $alpha: 0.5);
+        padding: 10px 13px;
+        border-radius: 5px;
+        position: fixed;
+        right: 75px;
+        top: 85vh;
+        display: none;
+        cursor: pointer;
+
+        i{
+            color: $color3;
+            font-size: 20px;
+        }
+        &.active{
+            display: block;
+        }
+    }
     // regole per il background i header e jumbotron a scroll = 0
     div.container-background-header-jumbo{
         min-height: 800px;
@@ -75,6 +93,10 @@
                 @include display-flex-row(center, center);
                 position: relative;
 
+                div.img:first-child{
+                    margin-right: 25px;
+                }
+
                 // regole chevron change img
                 i{
                     padding: 35px 13px;
@@ -89,7 +111,7 @@
                 i.fa-chevron-left{
                         position: absolute;
                         top: 50%;
-                        left: 20px;
+                        left: 0;
                         transform: translateY(-50%);
                 }
                 i.fa-chevron-right{
@@ -97,14 +119,6 @@
                         top: 50%;
                         right: 0;
                         transform: translateY(-50%);
-                }
-                // regole div img
-                div.img.none{
-                    display: none;
-                }
-                div.img.active{
-                    display: block;
-                    margin-left: 20px;
                 }
                 // regole div testo nascosto
                 div.img{
@@ -314,16 +328,9 @@
                         transform: translateY(-50%);
                 }
 
-                div.card.none{
-                    display: none;
-                }
-                div.card.active{
-                    display: block;
-                    margin-left: 20px;
-                }
-
                 div.card{
                     text-align: center;
+                    margin-left: 20px;
 
                     div.content-img{
                         position: relative;
