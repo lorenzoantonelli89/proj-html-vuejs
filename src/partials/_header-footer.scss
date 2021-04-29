@@ -102,9 +102,6 @@
                 h3{
                     @include text-font(25px, $font1, -0.3px, $color1);
                 }
-                h3:hover{
-                    text-decoration: underline;
-                }
                 div{
                     input{
                         padding: 15px 80px 15px 20px;
@@ -137,9 +134,6 @@
             div{
                 span{
                     @include text-font(12px, $font2, 0, $color2);
-                }
-                span:hover{
-                    text-decoration: underline;
                 }
                 span.violet:hover{
                     color: $color1;

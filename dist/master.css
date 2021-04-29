@@ -110,9 +110,6 @@
   letter-spacing: -0.3px;
   color: #55328b;
 }
-#app footer section.footer-section-first div.subscribe h3:hover {
-  text-decoration: underline;
-}
 #app footer section.footer-section-first div.subscribe div input {
   padding: 15px 80px 15px 20px;
   border: 1px solid #f0edf5;
@@ -144,9 +141,6 @@
   font-family: "Work Sans", sans-serif;
   letter-spacing: 0;
   color: #676361;
-}
-#app footer section.footer-section-second div span:hover {
-  text-decoration: underline;
 }
 #app footer section.footer-section-second div span.violet:hover {
   color: #55328b;
@@ -229,10 +223,7 @@
   text-decoration: none;
   border-radius: 5px;
 }
-#app #jumbotron > *:hover {
-  text-decoration: underline;
-}
-#app #jumbotron > *:hover:last-child {
+#app #jumbotron a:hover {
   background-color: #55328b;
   color: #ffff;
   text-decoration: none;
@@ -278,9 +269,6 @@
   text-decoration: none;
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
-}
-#app main section.section-first .fade-enter-active, #app main section.section-first .fade-leave-active {
-  transition: opacity 0.5s;
 }
 #app main section.section-first div.carousel {
   display: flex;
@@ -340,9 +328,6 @@
   font-family: "Source Serif Pro", serif;
   letter-spacing: -0.2px;
 }
-#app main section.section-first div.carousel div.img div.hidden h3:hover {
-  text-decoration: underline;
-}
 #app main section.section-first div.carousel div.img div.hidden div:first-of-type {
   margin-top: 15px;
   margin-bottom: 25px;
@@ -350,9 +335,6 @@
 #app main section.section-first div.carousel div.img div.hidden div:first-of-type span {
   font-size: 12px;
   font-family: "Work Sans", sans-serif;
-}
-#app main section.section-first div.carousel div.img div.hidden div:first-of-type span:hover {
-  text-decoration: underline;
 }
 #app main section.section-first div.carousel div.img div.hidden div:last-of-type span {
   font-family: "Work Sans", sans-serif;
@@ -368,12 +350,6 @@
 }
 #app main section.section-first div.carousel div.img div.hidden div:last-of-type span.divisor {
   margin-left: -7px;
-}
-#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.dollar:hover {
-  border-bottom: 1px dashed #ffff;
-}
-#app main section.section-first div.carousel div.img div.hidden div:last-of-type span.underline:hover {
-  text-decoration: underline;
 }
 #app main section.section-second {
   width: 83.3%;
@@ -396,9 +372,6 @@
   color: #55328b;
   margin-top: 35px;
   margin-bottom: 75px;
-}
-#app main section.section-second div.title > *:hover {
-  text-decoration: underline;
 }
 #app main section.section-second div.image-promo {
   display: flex;
@@ -457,10 +430,7 @@
 #app main section.section-second div.image-promo div.promo-1:hover div.text-hidden {
   visibility: visible;
 }
-#app main section.section-second div.image-promo div.promo-1:hover div.text-hidden > *:hover {
-  text-decoration: underline;
-}
-#app main section.section-second div.image-promo div.promo-1:hover div.text-hidden > *:hover:last-child {
+#app main section.section-second div.image-promo div.promo-1:hover div.text-hidden a:hover {
   background-color: #f0edf5;
   color: #55328b;
   padding: 15px 30px;
@@ -476,10 +446,7 @@
 #app main section.section-second div.image-promo div.promo-2:hover div.text-hidden {
   visibility: visible;
 }
-#app main section.section-second div.image-promo div.promo-2:hover div.text-hidden > *:hover {
-  text-decoration: underline;
-}
-#app main section.section-second div.image-promo div.promo-2:hover div.text-hidden > *:hover:last-child {
+#app main section.section-second div.image-promo div.promo-2:hover div.text-hidden a:hover {
   background-color: #f0edf5;
   color: #55328b;
   padding: 15px 30px;
@@ -585,9 +552,6 @@
   font-weight: lighter;
   line-height: 25px;
   text-decoration: none;
-}
-#app main section.section-third div.carousel div.card div.content-img div.layover a:hover {
-  text-decoration: underline;
 }
 #app main section.section-third div.carousel div.card div.content-img:hover div.layover {
   visibility: visible;
@@ -885,9 +849,6 @@
   margin-top: 50px;
   margin-bottom: 40px;
 }
-#app main section.section-fifth div.box-locations h2:hover {
-  text-decoration: underline;
-}
 #app main section.section-fifth div.box-locations div.info {
   display: flex;
   align-items: center;
@@ -908,9 +869,6 @@
   letter-spacing: 0;
   color: #676361;
 }
-#app main section.section-fifth div.box-locations div.info div > *:hover {
-  text-decoration: underline;
-}
 #app main section.section-fifth div.box-locations div.info a {
   background-color: #ffff;
   color: #55328b;
@@ -929,7 +887,6 @@
   text-decoration: none;
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
-  text-decoration: underline;
 }
 #app main section.section-sixth {
   width: 83.3%;
@@ -987,10 +944,7 @@
   font-size: 14px;
   padding-right: 10px;
 }
-#app main section.section-sixth div.container-up-photo div.card-2 > *:hover {
-  text-decoration: underline;
-}
-#app main section.section-sixth div.container-up-photo div.card-2 > *:hover:last-child {
+#app main section.section-sixth div.container-up-photo div.card-2 a:hover {
   background-color: #ffff;
   color: #55328b;
   padding: 15px 30px;
@@ -998,9 +952,8 @@
   text-decoration: none;
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
-  text-decoration: underline;
 }
-#app main section.section-sixth div.container-up-photo div.card-2 > *:hover:last-child i {
+#app main section.section-sixth div.container-up-photo div.card-2 a:hover i {
   color: #55328b;
 }
 #app main section.section-sixth div.container-up-photo div.card-3 {
@@ -1091,13 +1044,9 @@
   font-family: "Work Sans", sans-serif;
   text-decoration: none;
 }
-#app main section.section-seventh div.content-text > *:hover {
-  text-decoration: underline;
-}
-#app main section.section-seventh div.content-text > *:hover:last-child {
+#app main section.section-seventh div.content-text a:hover {
   background-color: #55328b;
   color: #ffff;
-  text-decoration: underline;
 }
 
 * {
