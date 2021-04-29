@@ -78,7 +78,7 @@
                 </div>
                 <div class="carousel">
                     <!-- ciclo immagini e testo da array carouselOne e modifico la posizione index dell'array da ciclare -->
-                    <div class="img" v-for="elem in carouselOne[indexCarousel1]">
+                    <div class="img" v-for="elem in orderCarousel1[indexCarousel1]">
                         <img :src="elem.img" alt="">
                         <div class="hidden">
                             <h3>
@@ -111,8 +111,8 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fas fa-chevron-left" @click="prevSlide1(carouselOne)"></i>
-                    <i class="fas fa-chevron-right" @click="nextSlide1(carouselOne)"></i>
+                    <i class="fas fa-chevron-left" @click="prevSlide1(orderCarousel1)"></i>
+                    <i class="fas fa-chevron-right" @click="nextSlide1(orderCarousel1)"></i>
                 </div>
             </section>
             <!-- seconda sezione eventi special -->
@@ -170,7 +170,7 @@
                 </div>
                 <div class="carousel">
                     <!-- ciclo immagini e testo da array carouselOne e modifico la posizione index dell'array da ciclare -->
-                    <div class="card" v-for="elem in carouselTwo[indexCarousel2]" >
+                    <div class="card" v-for="elem in orderCarousel2[indexCarousel2]" >
                         <div class="content-img">
                             <img :src="elem.img" alt="">
                             <div class="layover">
@@ -190,8 +190,8 @@
                             {{elem.value}}
                         </p>
                     </div>
-                    <i class="fas fa-chevron-left" @click="prevSlide2(carouselTwo)"></i>
-                    <i class="fas fa-chevron-right" @click="nextSlide2(carouselTwo)"></i>
+                    <i class="fas fa-chevron-left" @click="prevSlide2(orderCarousel2)"></i>
+                    <i class="fas fa-chevron-right" @click="nextSlide2(orderCarousel2)"></i>
                 </div>
             </section>
             <!-- sezione quattro 3 blocchi immagini e testo -->

@@ -20,7 +20,8 @@ function initVue() {
       'activeLinkHeader': 0,
       'scrollOn': false,
       'indexCarousel1': 0,
-      'carouselOne': [[{
+      'carousel1NumSlide': 2,
+      'carouselOne': [{
         img: 'img/choco-chip-cookies-400x510.jpg',
         name: 'Choco Chip Cookies',
         category1: 'Cookies',
@@ -36,7 +37,7 @@ function initVue() {
         currency: '$',
         value1: '36.00',
         value2: '60.00'
-      }], [{
+      }, {
         img: 'img/cookies-with-ice-cream-400x510.jpg',
         name: 'Cookies with ice cream',
         category1: 'Cookies',
@@ -52,7 +53,7 @@ function initVue() {
         currency: '$',
         value1: '26.00',
         value2: '68.00'
-      }]],
+      }],
       'locations': [{
         img: 'img/new-york-bk-800x530.jpg',
         city: 'New York',
@@ -67,7 +68,8 @@ function initVue() {
         imgMap: 'img/london.png'
       }],
       'indexCarousel2': 0,
-      'carouselTwo': [[{
+      'carousel2NumSlide': 4,
+      'carouselTwo': [{
         img: 'img/choco-chip-cookies-200x255.jpg',
         name: 'Choco Chip Cookies',
         value: '$18.00 - $32.00'
@@ -83,7 +85,7 @@ function initVue() {
         img: 'img/perfect-macarons-200x255.jpg',
         name: 'Perfect Macarons',
         value: '$32.00 - $56.00'
-      }], [{
+      }, {
         img: 'img/premium-bread-200x255.jpg',
         name: 'Premium Bread',
         value: '$32.00 - $68.00'
@@ -99,7 +101,7 @@ function initVue() {
         img: 'img/blackberry-stuffed-bread-200x255.jpg',
         name: 'Blackberry Stuffed Bread',
         value: '$22.00 - $46.00'
-      }], [{
+      }, {
         img: 'img/glazed-pancake-with-lemon-200x255.jpg',
         name: 'Glazed Bread with Fruits',
         value: '$24.00'
@@ -115,7 +117,7 @@ function initVue() {
         img: 'img/premium-bread-200x255.jpg',
         name: 'Premium Bread',
         value: '$32.00 - $68.00'
-      }]],
+      }],
       'linksFooter': ['Shop', 'About', 'Gallery', 'Locations', 'Journal', 'Contact', 'Orders', '<i class="fas fa-shopping-cart"></i>'],
       'inputEmail': '',
       'socialIcons': ['fa-instagram', 'fa-twitter', 'fa-facebook-f', 'fa-pinterest-p'],
@@ -199,6 +201,42 @@ function initVue() {
       getEmail: function getEmail() {
         this.emails.push(this.inputEmail);
         this.inputEmail = '';
+      }
+    },
+    computed: {
+      // funzione per ordinare carosello 1
+      orderCarousel1: function orderCarousel1() {
+        var newArray = [];
+        var arrTemporary = [];
+
+        for (var i = 0; i < this.carouselOne.length; i++) {
+          elem = this.carouselOne[i];
+          arrTemporary.push(elem);
+
+          if (arrTemporary.length == this.carousel1NumSlide) {
+            newArray.push(arrTemporary);
+            arrTemporary = [];
+          }
+        }
+
+        return newArray;
+      },
+      // funzione per ordinare carosello 2
+      orderCarousel2: function orderCarousel2() {
+        var newArray = [];
+        var arrTemporary = [];
+
+        for (var i = 0; i < this.carouselTwo.length; i++) {
+          elem = this.carouselTwo[i];
+          arrTemporary.push(elem);
+
+          if (arrTemporary.length == this.carousel2NumSlide) {
+            newArray.push(arrTemporary);
+            arrTemporary = [];
+          }
+        }
+
+        return newArray;
       }
     }
   });

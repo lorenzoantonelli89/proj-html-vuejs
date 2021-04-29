@@ -18,47 +18,45 @@ function initVue() {
             'activeLinkHeader': 0,
             'scrollOn': false,
             'indexCarousel1': 0,
+            'carousel1NumSlide': 2,
             'carouselOne': [
-                [
-                    {
-                        img: 'img/choco-chip-cookies-400x510.jpg',
-                        name: 'Choco Chip Cookies',
-                        category1: 'Cookies',
-                        category2: 'Pastries',
-                        currency: '$',
-                        value1: '18.00',
-                        value2: '36.00',
-                    },
-                    {
-                        img: 'img/strawberry-jam-cookies-400x510.jpg',
-                        name: 'Strawberry Jam Cookies',
-                        category1: 'Cookies',
-                        category2: 'Pastries',
-                        currency: '$',
-                        value1: '36.00',
-                        value2: '60.00',
-                    },
-                ],
-                [
-                    {
-                        img: 'img/cookies-with-ice-cream-400x510.jpg',
-                        name: 'Cookies with ice cream',
-                        category1: 'Cookies',
-                        category2: 'Pastries',
-                        currency: '$',
-                        value1: '18.00',
-                        value2: '34.00',
-                    },
-                    {
-                        img: 'img/home-bread-400x510.jpg',
-                        name: 'Homemade Bread',
-                        category1: 'Bread',
-                        category2: 'Pastries',
-                        currency: '$',
-                        value1: '26.00',
-                        value2: '68.00',
-                    },
-                ],
+            
+                {
+                    img: 'img/choco-chip-cookies-400x510.jpg',
+                    name: 'Choco Chip Cookies',
+                    category1: 'Cookies',
+                    category2: 'Pastries',
+                    currency: '$',
+                    value1: '18.00',
+                    value2: '36.00',
+                },
+                {
+                    img: 'img/strawberry-jam-cookies-400x510.jpg',
+                    name: 'Strawberry Jam Cookies',
+                    category1: 'Cookies',
+                    category2: 'Pastries',
+                    currency: '$',
+                    value1: '36.00',
+                    value2: '60.00',
+                },
+                {
+                    img: 'img/cookies-with-ice-cream-400x510.jpg',
+                    name: 'Cookies with ice cream',
+                    category1: 'Cookies',
+                    category2: 'Pastries',
+                    currency: '$',
+                    value1: '18.00',
+                    value2: '34.00',
+                },
+                {
+                    img: 'img/home-bread-400x510.jpg',
+                    name: 'Homemade Bread',
+                    category1: 'Bread',
+                    category2: 'Pastries',
+                    currency: '$',
+                    value1: '26.00',
+                    value2: '68.00',
+                },
             ],
             'locations': [
                 {
@@ -77,73 +75,69 @@ function initVue() {
                 }
             ],
             'indexCarousel2': 0,
+            'carousel2NumSlide': 4,
             'carouselTwo': [
-                [
-                    {
-                        img: 'img/choco-chip-cookies-200x255.jpg',
-                        name: 'Choco Chip Cookies',
-                        value: '$18.00 - $32.00',
-                    },
-                    {
-                        img: 'img/strawberry-jam-cookies-200x255.jpg',
-                        name: 'Strawberry Jam Cookies',
-                        value: '$36.00 - $60.00',
-                    },
-                    {
-                        img: 'img/strawberry-donut-200x255.jpg',
-                        name: 'Strawberry Donut',
-                        value: '$24.00 - $48.00',
-                    },
-                    {
-                        img: 'img/perfect-macarons-200x255.jpg',
-                        name: 'Perfect Macarons',
-                        value: '$32.00 - $56.00',
-                    },
-                ],
-                [
-                    {
-                        img: 'img/premium-bread-200x255.jpg',
-                        name: 'Premium Bread',
-                        value: '$32.00 - $68.00',
-                    },
-                    {
-                        img: 'img/cherry-cake-200x255.jpg',
-                        name: 'Cake with Cherry Topping',
-                        value: '$99.00',
-                    },
-                    {
-                        img: 'img/cookies-with-ice-cream-200x255.jpg',
-                        name: 'Cookies with ice cream',
-                        value: '$18.00 - $34.00',
-                    },
-                    {
-                        img: 'img/blackberry-stuffed-bread-200x255.jpg',
-                        name: 'Blackberry Stuffed Bread',
-                        value: '$22.00 - $46.00',
-                    },
-                ],
-                [
-                    {
-                        img: 'img/glazed-pancake-with-lemon-200x255.jpg',
-                        name: 'Glazed Bread with Fruits',
-                        value: '$24.00',
-                    },
-                    {
-                        img: 'img/small-cupcake-200x255.jpg',
-                        name: 'Chocolate Cupcake',
-                        value: '$26.00 - $68.00',
-                    },
-                    {
-                        img: 'img/home-bread-200x255.jpg',
-                        name: 'Homemade Bread',
-                        value: '$26.00 - $68.00',
-                    },
-                    {
-                        img: 'img/premium-bread-200x255.jpg',
-                        name: 'Premium Bread',
-                        value: '$32.00 - $68.00',
-                    },
-                ],
+                
+                {
+                    img: 'img/choco-chip-cookies-200x255.jpg',
+                    name: 'Choco Chip Cookies',
+                    value: '$18.00 - $32.00',
+                },
+                {
+                    img: 'img/strawberry-jam-cookies-200x255.jpg',
+                    name: 'Strawberry Jam Cookies',
+                    value: '$36.00 - $60.00',
+                },
+                {
+                    img: 'img/strawberry-donut-200x255.jpg',
+                    name: 'Strawberry Donut',
+                    value: '$24.00 - $48.00',
+                },
+                {
+                    img: 'img/perfect-macarons-200x255.jpg',
+                    name: 'Perfect Macarons',
+                    value: '$32.00 - $56.00',
+                },
+                {
+                    img: 'img/premium-bread-200x255.jpg',
+                    name: 'Premium Bread',
+                    value: '$32.00 - $68.00',
+                },
+                {
+                    img: 'img/cherry-cake-200x255.jpg',
+                    name: 'Cake with Cherry Topping',
+                    value: '$99.00',
+                },
+                {
+                    img: 'img/cookies-with-ice-cream-200x255.jpg',
+                    name: 'Cookies with ice cream',
+                    value: '$18.00 - $34.00',
+                },
+                {
+                    img: 'img/blackberry-stuffed-bread-200x255.jpg',
+                    name: 'Blackberry Stuffed Bread',
+                    value: '$22.00 - $46.00',
+                },
+                {
+                    img: 'img/glazed-pancake-with-lemon-200x255.jpg',
+                    name: 'Glazed Bread with Fruits',
+                    value: '$24.00',
+                },
+                {
+                    img: 'img/small-cupcake-200x255.jpg',
+                    name: 'Chocolate Cupcake',
+                    value: '$26.00 - $68.00',
+                },
+                {
+                    img: 'img/home-bread-200x255.jpg',
+                    name: 'Homemade Bread',
+                    value: '$26.00 - $68.00',
+                },
+                {
+                    img: 'img/premium-bread-200x255.jpg',
+                    name: 'Premium Bread',
+                    value: '$32.00 - $68.00',
+                },
             ],
             'linksFooter': [
                 'Shop',
@@ -239,6 +233,39 @@ function initVue() {
                 this.emails.push(this.inputEmail);
                 this.inputEmail = '';
             },
+        },
+        computed: {
+            // funzione per ordinare carosello 1
+            orderCarousel1: function () {
+                
+                const newArray = [];
+                let arrTemporary = [];
+
+                for (let i = 0; i < this.carouselOne.length; i++) {
+                    elem = this.carouselOne[i];
+                    arrTemporary.push(elem);
+                    if (arrTemporary.length == this.carousel1NumSlide) {
+                        newArray.push(arrTemporary);
+                        arrTemporary = [];
+                    }
+                }
+                return newArray;
+            },
+            // funzione per ordinare carosello 2
+            orderCarousel2: function () {
+                const newArray = [];
+                let arrTemporary = [];
+
+                for (let i = 0; i < this.carouselTwo.length; i++) {
+                    elem = this.carouselTwo[i];
+                    arrTemporary.push(elem);
+                    if (arrTemporary.length == this.carousel2NumSlide) {
+                        newArray.push(arrTemporary);
+                        arrTemporary = [];
+                    }
+                }
+                return newArray;
+            }
         },
     });
 }
