@@ -77,8 +77,8 @@
                     </a>
                 </div>
                 <div class="carousel">
-                    <!-- ciclo immagini e testo da array carouselOne e aggiungo display block o none con una classe bindata in base alla visibility del oggetto -->
-                    <div class="img" v-for="elem in carouselOne[indexCarousel]">
+                    <!-- ciclo immagini e testo da array carouselOne e modifico la posizione index dell'array da ciclare -->
+                    <div class="img" v-for="elem in carouselOne[indexCarousel1]">
                         <img :src="elem.img" alt="">
                         <div class="hidden">
                             <h3>
@@ -111,8 +111,8 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fas fa-chevron-left" @click="prevSlide(carouselOne)"></i>
-                    <i class="fas fa-chevron-right" @click="nextSlide(carouselOne)"></i>
+                    <i class="fas fa-chevron-left" @click="prevSlide1(carouselOne)"></i>
+                    <i class="fas fa-chevron-right" @click="nextSlide1(carouselOne)"></i>
                 </div>
             </section>
             <!-- seconda sezione eventi special -->
@@ -169,8 +169,8 @@
                     </a>
                 </div>
                 <div class="carousel">
-                    <!-- ciclo immagini e testo da array carouselOne e aggiungo display block o none con una classe bindata in base alla visibility del oggetto -->
-                    <div class="card" v-for="elem in carouselTwo[indexCarousel]" >
+                    <!-- ciclo immagini e testo da array carouselOne e modifico la posizione index dell'array da ciclare -->
+                    <div class="card" v-for="elem in carouselTwo[indexCarousel2]" >
                         <div class="content-img">
                             <img :src="elem.img" alt="">
                             <div class="layover">
@@ -190,8 +190,8 @@
                             {{elem.value}}
                         </p>
                     </div>
-                    <i class="fas fa-chevron-left" @click="prevSlide(carouselTwo)"></i>
-                    <i class="fas fa-chevron-right" @click="nextSlide(carouselTwo)"></i>
+                    <i class="fas fa-chevron-left" @click="prevSlide2(carouselTwo)"></i>
+                    <i class="fas fa-chevron-right" @click="nextSlide2(carouselTwo)"></i>
                 </div>
             </section>
             <!-- sezione quattro 3 blocchi immagini e testo -->

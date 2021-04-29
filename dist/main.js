@@ -19,7 +19,7 @@ function initVue() {
       'linksHeader': ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT', '<i class="fas fa-shopping-cart"></i>'],
       'activeLinkHeader': 0,
       'scrollOn': false,
-      'indexCarousel': 0,
+      'indexCarousel1': 0,
       'carouselOne': [[{
         img: 'img/choco-chip-cookies-400x510.jpg',
         name: 'Choco Chip Cookies',
@@ -66,6 +66,7 @@ function initVue() {
         openingTime: '9:00 AM - 6:00 PM',
         imgMap: 'img/london.png'
       }],
+      'indexCarousel2': 0,
       'carouselTwo': [[{
         img: 'img/choco-chip-cookies-200x255.jpg',
         name: 'Choco Chip Cookies',
@@ -153,19 +154,35 @@ function initVue() {
         this.activeLinkHeader = index;
       },
       // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
-      prevSlide: function prevSlide(arr) {
-        this.indexCarousel--;
+      prevSlide1: function prevSlide1(arr) {
+        this.indexCarousel1--;
 
-        if (this.indexCarousel < 0) {
-          this.indexCarousel = arr.length - 1;
+        if (this.indexCarousel1 < 0) {
+          this.indexCarousel1 = arr.length - 1;
         }
       },
       // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
-      nextSlide: function nextSlide(arr) {
-        this.indexCarousel++;
+      nextSlide1: function nextSlide1(arr) {
+        this.indexCarousel1++;
 
-        if (this.indexCarousel >= arr.length) {
-          this.indexCarousel = 0;
+        if (this.indexCarousel1 >= arr.length) {
+          this.indexCarousel1 = 0;
+        }
+      },
+      // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
+      prevSlide2: function prevSlide2(arr) {
+        this.indexCarousel2--;
+
+        if (this.indexCarousel2 < 0) {
+          this.indexCarousel2 = arr.length - 1;
+        }
+      },
+      // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
+      nextSlide2: function nextSlide2(arr) {
+        this.indexCarousel2++;
+
+        if (this.indexCarousel2 >= arr.length) {
+          this.indexCarousel2 = 0;
         }
       },
       // funzione per rendere la mappa della location visibile al click
@@ -183,8 +200,7 @@ function initVue() {
         this.emails.push(this.inputEmail);
         this.inputEmail = '';
       }
-    },
-    computed: {}
+    }
   });
 }
 

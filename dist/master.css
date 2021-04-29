@@ -279,6 +279,9 @@
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
 }
+#app main section.section-first .fade-enter-active, #app main section.section-first .fade-leave-active {
+  transition: opacity 0.5s;
+}
 #app main section.section-first div.carousel {
   display: flex;
   align-items: center;
