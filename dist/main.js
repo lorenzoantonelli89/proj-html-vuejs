@@ -19,41 +19,43 @@ function initVue() {
       'linksHeader': ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT', '<i class="fas fa-shopping-cart"></i>'],
       'activeLinkHeader': 0,
       'scrollOn': false,
-      'indexCarousel1': 0,
-      'carousel1NumSlide': 2,
-      'carouselOne': [{
-        img: 'img/choco-chip-cookies-400x510.jpg',
-        name: 'Choco Chip Cookies',
-        category1: 'Cookies',
-        category2: 'Pastries',
-        currency: '$',
-        value1: '18.00',
-        value2: '36.00'
-      }, {
-        img: 'img/strawberry-jam-cookies-400x510.jpg',
-        name: 'Strawberry Jam Cookies',
-        category1: 'Cookies',
-        category2: 'Pastries',
-        currency: '$',
-        value1: '36.00',
-        value2: '60.00'
-      }, {
-        img: 'img/cookies-with-ice-cream-400x510.jpg',
-        name: 'Cookies with ice cream',
-        category1: 'Cookies',
-        category2: 'Pastries',
-        currency: '$',
-        value1: '18.00',
-        value2: '34.00'
-      }, {
-        img: 'img/home-bread-400x510.jpg',
-        name: 'Homemade Bread',
-        category1: 'Bread',
-        category2: 'Pastries',
-        currency: '$',
-        value1: '26.00',
-        value2: '68.00'
-      }],
+      'carouselOne': {
+        index: 0,
+        itemPerSlide: 2,
+        slides: [{
+          img: 'img/choco-chip-cookies-400x510.jpg',
+          name: 'Choco Chip Cookies',
+          category1: 'Cookies',
+          category2: 'Pastries',
+          currency: '$',
+          value1: '18.00',
+          value2: '36.00'
+        }, {
+          img: 'img/strawberry-jam-cookies-400x510.jpg',
+          name: 'Strawberry Jam Cookies',
+          category1: 'Cookies',
+          category2: 'Pastries',
+          currency: '$',
+          value1: '36.00',
+          value2: '60.00'
+        }, {
+          img: 'img/cookies-with-ice-cream-400x510.jpg',
+          name: 'Cookies with ice cream',
+          category1: 'Cookies',
+          category2: 'Pastries',
+          currency: '$',
+          value1: '18.00',
+          value2: '34.00'
+        }, {
+          img: 'img/home-bread-400x510.jpg',
+          name: 'Homemade Bread',
+          category1: 'Bread',
+          category2: 'Pastries',
+          currency: '$',
+          value1: '26.00',
+          value2: '68.00'
+        }]
+      },
       'locations': [{
         img: 'img/new-york-bk-800x530.jpg',
         city: 'New York',
@@ -67,57 +69,59 @@ function initVue() {
         openingTime: '9:00 AM - 6:00 PM',
         imgMap: 'img/london.png'
       }],
-      'indexCarousel2': 0,
-      'carousel2NumSlide': 4,
-      'carouselTwo': [{
-        img: 'img/choco-chip-cookies-200x255.jpg',
-        name: 'Choco Chip Cookies',
-        value: '$18.00 - $32.00'
-      }, {
-        img: 'img/strawberry-jam-cookies-200x255.jpg',
-        name: 'Strawberry Jam Cookies',
-        value: '$36.00 - $60.00'
-      }, {
-        img: 'img/strawberry-donut-200x255.jpg',
-        name: 'Strawberry Donut',
-        value: '$24.00 - $48.00'
-      }, {
-        img: 'img/perfect-macarons-200x255.jpg',
-        name: 'Perfect Macarons',
-        value: '$32.00 - $56.00'
-      }, {
-        img: 'img/premium-bread-200x255.jpg',
-        name: 'Premium Bread',
-        value: '$32.00 - $68.00'
-      }, {
-        img: 'img/cherry-cake-200x255.jpg',
-        name: 'Cake with Cherry Topping',
-        value: '$99.00'
-      }, {
-        img: 'img/cookies-with-ice-cream-200x255.jpg',
-        name: 'Cookies with ice cream',
-        value: '$18.00 - $34.00'
-      }, {
-        img: 'img/blackberry-stuffed-bread-200x255.jpg',
-        name: 'Blackberry Stuffed Bread',
-        value: '$22.00 - $46.00'
-      }, {
-        img: 'img/glazed-pancake-with-lemon-200x255.jpg',
-        name: 'Glazed Bread with Fruits',
-        value: '$24.00'
-      }, {
-        img: 'img/small-cupcake-200x255.jpg',
-        name: 'Chocolate Cupcake',
-        value: '$26.00 - $68.00'
-      }, {
-        img: 'img/home-bread-200x255.jpg',
-        name: 'Homemade Bread',
-        value: '$26.00 - $68.00'
-      }, {
-        img: 'img/premium-bread-200x255.jpg',
-        name: 'Premium Bread',
-        value: '$32.00 - $68.00'
-      }],
+      'carouselTwo': {
+        index: 0,
+        itemPerSlide: 4,
+        slides: [{
+          img: 'img/choco-chip-cookies-200x255.jpg',
+          name: 'Choco Chip Cookies',
+          value: '$18.00 - $32.00'
+        }, {
+          img: 'img/strawberry-jam-cookies-200x255.jpg',
+          name: 'Strawberry Jam Cookies',
+          value: '$36.00 - $60.00'
+        }, {
+          img: 'img/strawberry-donut-200x255.jpg',
+          name: 'Strawberry Donut',
+          value: '$24.00 - $48.00'
+        }, {
+          img: 'img/perfect-macarons-200x255.jpg',
+          name: 'Perfect Macarons',
+          value: '$32.00 - $56.00'
+        }, {
+          img: 'img/premium-bread-200x255.jpg',
+          name: 'Premium Bread',
+          value: '$32.00 - $68.00'
+        }, {
+          img: 'img/cherry-cake-200x255.jpg',
+          name: 'Cake with Cherry Topping',
+          value: '$99.00'
+        }, {
+          img: 'img/cookies-with-ice-cream-200x255.jpg',
+          name: 'Cookies with ice cream',
+          value: '$18.00 - $34.00'
+        }, {
+          img: 'img/blackberry-stuffed-bread-200x255.jpg',
+          name: 'Blackberry Stuffed Bread',
+          value: '$22.00 - $46.00'
+        }, {
+          img: 'img/glazed-pancake-with-lemon-200x255.jpg',
+          name: 'Glazed Bread with Fruits',
+          value: '$24.00'
+        }, {
+          img: 'img/small-cupcake-200x255.jpg',
+          name: 'Chocolate Cupcake',
+          value: '$26.00 - $68.00'
+        }, {
+          img: 'img/home-bread-200x255.jpg',
+          name: 'Homemade Bread',
+          value: '$26.00 - $68.00'
+        }, {
+          img: 'img/premium-bread-200x255.jpg',
+          name: 'Premium Bread',
+          value: '$32.00 - $68.00'
+        }]
+      },
       'linksFooter': ['Shop', 'About', 'Gallery', 'Locations', 'Journal', 'Contact', 'Orders', '<i class="fas fa-shopping-cart"></i>'],
       'inputEmail': '',
       'socialIcons': ['fa-instagram', 'fa-twitter', 'fa-facebook-f', 'fa-pinterest-p'],
@@ -155,36 +159,25 @@ function initVue() {
       clickLink: function clickLink(index) {
         this.activeLinkHeader = index;
       },
+      // funzione per prendere l'ultima slide del carousel
+      lastSlideNumber: function lastSlideNumber(carousel) {
+        var lastSlideNumber = Math.ceil(carousel.slides.length / carousel.itemPerSlide) - 1;
+        return lastSlideNumber;
+      },
       // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
-      prevSlide1: function prevSlide1(arr) {
-        this.indexCarousel1--;
+      prevSlide: function prevSlide(carousel) {
+        carousel.index--;
 
-        if (this.indexCarousel1 < 0) {
-          this.indexCarousel1 = arr.length - 1;
+        if (carousel.index < 0) {
+          carousel.index = this.lastSlideNumber(carousel);
         }
       },
       // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
-      nextSlide1: function nextSlide1(arr) {
-        this.indexCarousel1++;
+      nextSlide: function nextSlide(carousel) {
+        carousel.index++;
 
-        if (this.indexCarousel1 >= arr.length) {
-          this.indexCarousel1 = 0;
-        }
-      },
-      // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
-      prevSlide2: function prevSlide2(arr) {
-        this.indexCarousel2--;
-
-        if (this.indexCarousel2 < 0) {
-          this.indexCarousel2 = arr.length - 1;
-        }
-      },
-      // funzione per cambiare slide contenente 2 o 4 immagini in base al carousel passo come parametro array di carousel
-      nextSlide2: function nextSlide2(arr) {
-        this.indexCarousel2++;
-
-        if (this.indexCarousel2 >= arr.length) {
-          this.indexCarousel2 = 0;
+        if (carousel.index > this.lastSlideNumber(carousel)) {
+          carousel.index = 0;
         }
       },
       // funzione per rendere la mappa della location visibile al click
@@ -209,11 +202,11 @@ function initVue() {
         var newArray = [];
         var arrTemporary = [];
 
-        for (var i = 0; i < this.carouselOne.length; i++) {
-          elem = this.carouselOne[i];
+        for (var i = 0; i < this.carouselOne.slides.length; i++) {
+          elem = this.carouselOne.slides[i];
           arrTemporary.push(elem);
 
-          if (arrTemporary.length == this.carousel1NumSlide) {
+          if (arrTemporary.length == this.carouselOne.itemPerSlide) {
             newArray.push(arrTemporary);
             arrTemporary = [];
           }
@@ -226,11 +219,11 @@ function initVue() {
         var newArray = [];
         var arrTemporary = [];
 
-        for (var i = 0; i < this.carouselTwo.length; i++) {
-          elem = this.carouselTwo[i];
+        for (var i = 0; i < this.carouselTwo.slides.length; i++) {
+          elem = this.carouselTwo.slides[i];
           arrTemporary.push(elem);
 
-          if (arrTemporary.length == this.carousel2NumSlide) {
+          if (arrTemporary.length == this.carouselTwo.itemPerSlide) {
             newArray.push(arrTemporary);
             arrTemporary = [];
           }
@@ -254,21 +247,152 @@ document.addEventListener('DOMContentLoaded', init);
 /*!*************************!*\
   !*** ./src/master.scss ***!
   \*************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Missing argument $color.\n   ┌──> src/partials/_main-homepage.scss\n149│                                 @include text-font(12px, $font2, $color3);\n   │                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\n   ╵\n   ┌──> src/partials/_variable.scss\n37 │ @mixin text-font($size, $family, $letspacing, $color) {\n   │        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ declaration\n   ╵\n  src/partials/_main-homepage.scss 149:33  text-font()\n  src/partials/_main-homepage.scss 149:33  @import\n  src/master.scss 3:9                      root stylesheet\n    at processResult (/Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/webpack/lib/NormalModule.js:676:19)\n    at /Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/webpack/lib/NormalModule.js:778:5\n    at /Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/loader-runner/lib/LoaderRunner.js:399:11\n    at /Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/loader-runner/lib/LoaderRunner.js:251:18\n    at context.callback (/Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at /Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/sass-loader/dist/index.js:54:7\n    at Function.call$2 (/Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/sass/sass.dart.js:92571:16)\n    at _render_closure1.call$2 (/Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/sass/sass.dart.js:81074:12)\n    at _RootZone.runBinary$3$3 (/Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/sass/sass.dart.js:27256:18)\n    at _FutureListener.handleError$1 (/Users/lorenzoantonelli/Desktop/Esercizi Boolean/proj-html-vuejs/node_modules/sass/sass.dart.js:25812:19)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					result = fn();
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/main": 0,
+/******/ 			"master": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			for(moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 				}
+/******/ 			}
+/******/ 			if(runtime) var result = runtime(__webpack_require__);
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkproj_html_vuejs"] = self["webpackChunkproj_html_vuejs"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_modules__["./src/main.js"]();
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/master.scss"]();
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["master"], () => (__webpack_require__("./src/main.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["master"], () => (__webpack_require__("./src/master.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
